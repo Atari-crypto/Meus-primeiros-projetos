@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Element By Tag Name</title>
+</head>
+<body>
+    <h2>
+        CFB Cursos
+    </h2>
+    <p>
+        Curso de JavaScript
+    </p>
+    <h2>
+        aula 25
+    </h2>
+    <p>
+        @eimiguellucas
+    </p>
+    <h2>
+        www.miguelestolano.com.br
+    </h2>
+
+
+    <hr/>
+
+    <script>
+        //document.getElementsByTagName("");
+
+        var tagsP=document.getElementsByTagName("p");
+
+        //document.write(tagsP[0].innerHTML);
+
+        //var tagsP=document.getElementsByTagName("p")[3];
+        
+        //document.write(tagsP.innerHTML)
+        //var tagsP=document.getElementsByTagName("p");
+         
+        //for(var i=0; i<tagsP.length; i++){
+        //tagsP[i].style.color="red"
+        //}
+
+        //var tags=document.getElementsByTagName("*");
+        //tags[8].style.color="red";
+        //tags[8].innerHTML="NOVO TEXTO"
+
+        for(var n=0; n<tagsP.length; n++){//o length é dois, e a maior posição para este caso é um.
+            document.write(tagsP[n].innerHTML + "<br>" );
+        }
+        
+    </script>
+
+</body>
+</html>

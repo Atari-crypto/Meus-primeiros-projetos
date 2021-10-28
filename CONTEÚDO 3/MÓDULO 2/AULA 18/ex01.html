@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h1 id="h1" onclick="cliqueiTitulo()">titulo</h1>
+    <p onclick="novoParagrafo()">parágrafo</p>
+    <p onclick="">conteúdo</p>
+    <p  id="p1">1</p>
+    <p  id="p2">2</p>
+    <input type="text" style="color: cadetblue;" name="nome" id="txt1" value="">
+    <p  id="p3">3</p>
+    <p  id="p4">4</p>
+    <div id="div1">caixa</div>
+    <button onclick="clicarBotao()">botao</button>
+
+
+    <script>
+
+        function clicarBotao(){
+            var txt = document.getElementById("p1").innerHTML;
+            var txt1 = document.getElementById("txt1").value;
+            var txt2 = document.getElementById("txt1").value = ("parabens" + txt);
+            alert(txt);
+            alert(txt1);
+            alert(txt2);
+        }
+
+
+
+
+        function cliqueiTitulo(){
+            alert(" vc clicou no título");
+        }
+
+        function novoParagrafo(){
+            alert(" vc clicou no parágrafo");
+            document.write("<p style='color:blue'>teste de parágrafo<p>");
+            document.write("<p>teste de parágrafo<p>");    
+        }
+
+
+    </script>
+</body>
+</html>

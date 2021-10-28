@@ -1,0 +1,27 @@
+.transformacao{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    transform: translate(50px,50px);
+}
+.tranformacao2{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    border: 2px solid black;
+    transform: translate(75px,0px);
+}
+.transformacao , .tranformacao2{
+    width: 100px;
+    height: 100px;
+    background-color:lightblue;
+    border: 2px solid black;
+    transition:  transform 2s ease-in-out, background-color 2s;
+
+}
+
+.transformacao:hover , .tranformacao2:hover{
+    background-color: blue;
+    transform: translate(300px,100px);
+}

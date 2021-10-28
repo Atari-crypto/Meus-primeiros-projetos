@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+</head>
+<body>
+    <script>
+        var pos;
+        pos = parseInt(prompt("Digite:\n 1 - Financeiro\n 2 - RH\n 3 - Comercial\n Qualquer outro número para Sair:"));
+
+        switch(pos){
+            case 1:
+                document.write("Ramal Financeiro");
+                break;
+            case 2:
+                document.write("Ramal RH");
+                break;
+            case 3:
+                document.write("Ramal Comercial");
+                break;
+            default:
+                document.write("Sair do programa");
+                break;
+        }
+        /*O Switch é como o IF, mas se usa, quando já temos variaveis conhecidas (neste acima, o usuário só podia digitar 1,2,3 (ou qualquer coisa para sair).
+        O Comando “Break” faz com que ele saia do Switch e continue o programa (ou fica para sempre).*/
+    </script>
+
+</body>
+</html>

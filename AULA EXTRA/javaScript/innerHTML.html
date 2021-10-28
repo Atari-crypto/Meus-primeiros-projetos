@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnerHTML</title>
+</head>
+<body>
+    <p id="texto">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod accusamus, ipsa quae quaerat, quo cum ut doloribus molestias repellat atque adipisci. Incidunt totam hic, corporis facilis delectus natus quaerat quae?
+    </p>
+    <input type="text" id="cxtexto" value="JAVASCRIPT">
+    <div id="box">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet, dolorem architecto? Et atque alias qui eum molestias quod id eligendi veniam est. Sapiente reprehenderit repudiandae, laudantium ipsa itaque necessitatibus architecto.
+    </div>
+    <script>
+       //var cxt= document.getElementById("cxtexto").value;
+
+       //alert(cxt);
+
+        var cxt= document.getElementById("texto").innerHTML="Aula de JvaScript- 24 Innerhtml";
+
+        document.getElementById('box').innerHTML="Novo texto"        
+    </script>
+</body>
+</html>

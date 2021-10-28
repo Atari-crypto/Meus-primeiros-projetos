@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>If com múltiplos retornos</title>
+</head>
+<body>
+    <script>
+        /*if(teste lógico verdadeiro){
+            faça algo quando verdadeiro
+        }
+        else(teste lógico falso){
+            faça outra coisa quando falso
+        }
+        
+        
+        */
+        /*var v1, v2;
+        v1 = 15;//v1
+        v2 = 20;//v3
+    
+        if(v1 > v2){//false or true
+            document.write("Olha a hora, oito e ônibus")
+    
+        }else{
+            document.write("ERROOOOOOOOOOOOOOU")
+        }*/
+    
+        var num1 = parseInt(prompt("Digite o primeiro número: "));
+        var num2 = parseInt(prompt("Digite o segundo número: "));
+        
+        if (num1 > num2){
+            if (num1 %2 == 0){/*numero maior*/
+                document.write("O numero " + num1 + " é maior que " + num2 + ", e " + num1 + " é par." );
+            }else{
+                document.write("O numero " + num1 + " é maior que " + num2 + ", e " + num1 + " é ímpar." );
+            }
+        }else if (num1=num2){
+                document.write("numeros iguais");
+        }else{
+            if(num2 % 2 == 0){/*numero maior*/
+                document.write("O numero " + num2 + " é maior que " + num1 + ", e " + num2 + " é par." );
+            }else {
+                document.write("O numero " + num2 + " é maior que " + num1 + ", e " + num2 + " é ímpar." );
+            }
+            
+        }
+    
+        </script>
+        <script>
+            /*If com múltiplos retornos 2*/ 
+            var nome = prompt("Digite o nome do aluno!");
+            var nota = prompt("Digite a média de " + nome + ".");
+            var res;
+    
+            if(nota >= 6){
+                res = "Aprovado";
+            }
+            else if ((nota >=4) && (nota < 6)){
+                res="Recuperação";
+            }
+            else{
+                res = "Reprovado";
+            }
+    
+            document.write("O aluno " + nome + " tirou " + nota + " e foi " + res);
+    
+        </script>
+    
+    
+</body>
+</html>

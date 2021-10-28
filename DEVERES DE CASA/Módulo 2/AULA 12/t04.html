@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa n°4</title>
+</head>
+<body>
+    <script>
+        var num= parseInt(prompt("Digite um número:"));
+        var n=1;
+
+        while(n>=0&&n<=1999){  
+            if(n%6==0&&n%9==0){
+                document.write( n + ".<br>");
+            }
+            n++;
+        }
+
+        document.write("Estes são os divisíveis por 6 e 9 de " + num  + " para " + n + ".");
+    </script>
+</body>
+</html>

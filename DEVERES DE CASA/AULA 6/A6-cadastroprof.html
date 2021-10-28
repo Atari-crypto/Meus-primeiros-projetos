@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Professores</title>
+</head>
+<body>
+    <form action="A6-recebido.html" name="formEnviodeCAD2" method="POST" id="idFormEnviodeCAD2">
+        <table>
+            <th>Cadastro de Professoress</th>
+            <tr>
+                <td>Matrícula:</td>
+                <td><input type="text" name="txtMatricula" value="" id="idMatriculaProfessores" placeholder="Digite sua matrícula"></td>
+            </tr>
+            <tr>
+                <td>Nome:</td>
+                <td><input type="text" name="txtNome" value="" id="idMatriculaProfessores" placeholder="Digite seu nome"></td>
+            </tr>
+            <tr>
+                <td>Matéria:</td>
+                <td>
+                    <select name="selMat" id="idFormEnviodeCAD2">
+                    <option value="" id="idMateriasProf1"> Escolha</option>
+                    <option value="A" id="idMateriasProf2"> Algoritmo</option>
+                    <option value="P" id="idMateriasProf3"> Português</option>
+                    <option value="M" id="idMateriasProf4"> Matemática</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Enviar o Cadastro"></td>
+                <td><input type="reset" value="Limpar Formulário"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

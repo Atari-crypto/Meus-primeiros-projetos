@@ -1,0 +1,11 @@
+ol{
+    width: 150px;
+    height: 150px;
+    border: rgb(248, 0, 0) 2px solid;
+}
+ol:hover{
+    background-color: lightseagreen;
+    transform: translate(300px,100px);
+    animation: step-end 60s;
+    animation-delay: 1s ;
+}

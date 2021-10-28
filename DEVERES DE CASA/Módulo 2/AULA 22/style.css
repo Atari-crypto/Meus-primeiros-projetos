@@ -1,0 +1,21 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 12px;
+
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+.menu__item {    
+    align-items: center;
+    display: flex;
+}
+.menu__divider {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    height: 1px;
+}
+@media only screen and (min-width:500px) {
+    #img01{
+        display: none;
+    }
+}

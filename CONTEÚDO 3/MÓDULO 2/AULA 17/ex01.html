@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas de aula</title>
+</head>
+<body>
+    <script>/*
+        //declaração de função com retorno 
+        // sem passagem de argumento
+            function somarValores1() { 
+                return 0;
+            }
+        //declaração de função com retorno
+        // com passagem de argumento
+            function somarValores2(n1) { 
+                return n1;
+            }
+        //declaração de função com retorno 
+        // com passagem de argumento
+            function somarValores3(n1, n2) { 
+                return (n1 + n2);
+            }
+        //declaração de função com retorno
+        // com passagem de argumento
+            function somarValores4(n1, n2, n3) { 
+                return (n1 + n2+ n3);
+            }
+        // chamando uma função
+        // basta chamar a função pelo nome
+        document.write( somarValores1() + ".<br>"); // chamanda a função sem passar argumento
+        document.write(somarValores2(8) + ".<br>" ); // chamando a função passando 1 argumento
+        document.write("Resultado é " + somarValores3(13 , 22) + ".<br>" ); // chamando a função passando 2 argumentos
+        document.write("Resultado da função é " + somarValores4(81 , 77 , 111) + ".<br>"); // chamando a função passando 3  
+
+        var aux= somarValores4(1,2,3);
+        document.write(aux + ".<br>");
+
+
+        function multiplicacao(n1, n2, n3) { 
+                return (n1 * n2 * n3);
+            }
+
+            var imprimir= multiplicacao(1,23,24);
+            document.write(imprimir + ".<br>");
+            */
+                var opcao = true;
+                var usuario;
+                var n1, n2 , n3;
+
+            function somarDois(n1,n2){
+                return(n1+n2);
+            }
+            function somarTres(n1,n2,n3){
+                return(n1+n2+n3);
+            }
+            function subtrairDois(n1,n2){
+                return(n1-n2);
+            }
+            function dividirDois(n1,n2){
+                return(n1/n2);
+            }
+            function multiplicarTres(n1,n2,n3){
+                return(n1*n2*n3);
+            }
+
+            do{
+                alert("Olá da Calculadora");
+                usuario= prompt("Digite a opção que deseja \nA - para somar 2 números\nB - para somar 3 números\nC - para subtrair 2 números\nD - para dividir 2 números\nE - para multiplicar 3 números\nS - para sair");
+
+                switch(usuario){
+
+                    case"A":
+                    case"a":
+                    n1 = Number(prompt("Digite o primeiro número"));
+                    n2 = Number(prompt("Digite o segundo número"));
+                    alert(somarDois(n1,n2));
+                    document.write("A soma de " + n1 + " + " + n2 + " = " + (somarDois(n1,n2)) + ".<br>");
+                    break;
+
+                    case"B":
+                    case"b":
+                    n1 = Number(prompt("Digite o primeiro número"));
+                    n2 = Number(prompt("Digite o segundo número"));
+                    n3 = Number(prompt("Digite o terceiro número"));
+                    alert(somarTres(n1,n2,n3));
+                    document.write("A soma de " + n1 + " + " + n2 + " + " + n3 + " = " + (somarTres(n1,n2,n3)) + ".<br>");
+                    break;
+
+                    case"C":
+                    case"c":
+                    n1 = Number(prompt("Digite o primeiro número"));
+                    n2 = Number(prompt("Digite o segundo número"));
+                    alert(subtrairDois(n1,n2));
+                    document.write("A subtração de " + n1 + " - " + n2 + " = " + (subtrairDois(n1,n2)) + ".<br>");
+                    break;
+
+                    case"D":
+                    case"d":
+                    n1 = Number(prompt("Digite o primeiro número"));
+                    n2 = Number(prompt("Digite o segundo número"));
+                    alert(dividirDois(n1,n2));
+                    document.write("A soma de " + n1 + " / " + n2 + " = " + (dividirDois(n1,n2)) + ".<br>");
+                    break;
+
+                    case"E":
+                    case"e":
+                    n1 = Number(prompt("Digite o primeiro número"));
+                    n2 = Number(prompt("Digite o segundo número"));
+                    n3 = Number(prompt("Digite o terceiro número"));
+                    alert(multiplicarTres(n1,n2,n3));
+                    document.write("A multiplicação de " + n1 + " + " + n2 + " + " + n3 + " = " + (multiplicarTres(n1,n2,n3)) + ".<br>");
+                    break;
+
+                    case"S":
+                    case"s":
+                    document.write("SAINDO...");
+                    opcao= false;
+                    break;
+
+                    default:
+                        document.write("Opção Inválida!");
+                        break;
+                }
+            }while(opcao);
+
+
+
+
+
+
+
+
+
+            
+                        
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+h1, h2 {
+
+    color: darkgray;
+}
+
+p {
+
+    color: darkgreen;
+
+}
+
+#idH {
+
+    color: red;
+
+}
+
+
+.destaque {
+
+    color: yellow;
+
+}
+.destaqueII {
+
+    color: yellow;
+
+}
+
+
+
+.negrito {
+
+    color: darkblue;
+
+}
+
+
+
+article > .destaque{
+
+    color: darkred;
+
+}
+

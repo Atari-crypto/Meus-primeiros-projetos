@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tratamento de erros</title>
+</head>
+<body>
+    <script>
+        //a exceção é levada para catch e automaticamentente interrompe o try
+         var num;   
+    try{
+        num=prompt("Digite um valor");
+        if(num>10){
+             throw new Error("Valor Inválido, o valor máximo é 10.");
+        }    
+    }catch(erro){ 
+        console.log("Erro:" + erro.message);
+        //num=10;
+        let=10
+    }finally{
+        document.write("Valor:" + num)
+    }
+    </script>
+</body>
+</html>

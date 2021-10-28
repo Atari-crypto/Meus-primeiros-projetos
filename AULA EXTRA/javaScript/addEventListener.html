@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-addEventListener.css">
+    <script>
+        function msg(){
+            alert("CFB Cursos");
+        }
+
+        //forma 1:
+        /*function cor1(){
+            var obj=document.getElementById("div1");
+            obj.style.backgroundColor="blue";
+            
+        }
+        
+        
+        function cor2(){
+            var obj=document.getElementById("div1");
+            obj.style.backgroundColor="green";
+        }*/
+
+
+        /*//Inicialização de Eventos 1:
+                function addEventos(){// desta forma é executada a ação quando renderizar a div abaixo, pois estamos acima, sendo assim não renderizado os elementos abaixo.
+                var obj=document.getElementById("div1")
+                    obj.addEventListener("click",msg);
+                    obj.addEventListener("mouseover",cor1);
+                    obj.addEventListener("mouseout",cor2);
+                //primeiro vc puxa o id pelo getElementById depois add o addEventListener que puxa o comando onclick(que no caso é só click) e a função msg()(que no caso se escreve somente msg).
+                }
+                window.addEventListener("load",addEventos);
+                //coloquei este addEventListener aqui para que não haja o código onload no html, sendo assim ele puxa a função sem necessidade de por on load no html.*/
+
+
+        //forma 2:
+        function cor(obj,cor){
+            obj.style.backgroundColor=cor;
+            
+            //chama o parâmetro cor para abaixo em addEventos aí sim designar a cor em determinada ação.
+        }
+
+        //Inicialização de Eventos 2:
+        function addEventos(){// desta forma é executada a ação quando renderizar a div abaixo, pois estamos acima, sendo assim não renderizado os elementos abaixo.
+            obj=document.getElementById("div1");
+            obj.addEventListener("click",msg);
+            obj.addEventListener("mouseover",function(event){
+                //chamei a função cor puxando a função acima para determinar a cor de fundo da div, quando o mouse estiver sobre a mesma. 
+                cor(obj,"green")
+            });
+            obj.addEventListener("mouseout",function(event){
+                //chamei a funçao cor puxando a função acima para determinar a cor de fundo da div, quando o mouse estiver saído da mesma. 
+                cor(obj,"brown")
+            });
+            //primeiro vc puxa o id pelo getElementById depois add o addEventListener que puxa o comando onclick(que no caso é só click) e a função msg()(que no caso se escreve somente msg).
+            }
+            window.addEventListener("load",addEventos);
+            //coloquei este addEventListener aqui para que não haja o código onload no html, sendo assim ele puxa a função sem necessidade de por on load no html.*/
+    </script>
+    <title>Add Event Listener</title>
+</head>
+<body>
+    <div id="div1" onclick="msg()"> <!--o comando onclick significa que ao clicar na div ele vai seguir com a ação descrita na funçao no javascript-->
+
+    </div>
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa n°3</title>
+</head>
+<body>
+    
+
+
+    <script>
+        /*Faça um script onde o usuário digite um número inteiro positivo. 
+        Imprima todos os números positivos divisíveis por 3.*/
+
+        var num= parseInt(prompt("Digite um número:"));
+        var n=1;
+        
+        while(n>=0&&n<=1000){
+            if(n%3==0){
+                document.write( n + ".<br>");
+            }
+            n++;
+        }
+
+        document.write("Estes são os divisíveis por 3 de " + num  + " para " + n + ".");
+
+    </script>
+</body>
+</html>

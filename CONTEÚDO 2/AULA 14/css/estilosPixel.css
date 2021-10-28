@@ -1,0 +1,12 @@
+*{
+    font-size: 100%;
+}
+p{
+    background-color: gray;
+    border-bottom-right-radius: 25px;
+    text-align: center;
+}
+p:hover{
+    background-color: aquamarine;
+    border-bottom: azure;
+}

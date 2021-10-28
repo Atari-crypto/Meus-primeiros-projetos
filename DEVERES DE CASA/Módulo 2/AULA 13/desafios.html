@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa de Casa - Desafios</title>
+</head>
+<body>
+    <script>
+          /*  //1°
+            //linha=altura / coluna = comprimento.
+            var linha = 1;
+            var coluna=1;
+            var qntLinha =parseInt(prompt("Digite o número da altura desejada:"));
+            var qntColuna=qntLinha;
+            while(linha<= qntLinha){
+    
+                
+                if(coluna<=1){
+                    document.write("@");
+                    coluna++;
+                }else if(coluna<=2){
+                    document.write("@@");
+                    coluna++;
+                }else if(coluna<=3){
+                    document.write("@@@");
+                    coluna++;
+                }else if(coluna<=4){
+                    document.write("@@@@");
+                    coluna++;
+                }else if(coluna<=5){
+                    document.write("@@@@@");
+                    coluna++;
+                }
+                
+                document.write("<br>");
+                linha++;
+            }
+            // outra forma de fazer:
+    
+            var altura = parseInt(prompt('Digite a altura do triangulo')) ;// 5
+            var linha = 1; // número de @ será definido por base - linha dentro do segundo while; primeira volta só imprime @
+            var base = 1 ;// percorre as linhas de base
+    
+            while (altura > 0) {
+            //5-4-3-2-1
+            while (linha <= base) {
+              //linha=1 base=1
+              document.write('@'); // Na primeira volta, só ler 1 @
+            linha++;
+            }
+            document.write('<br>');
+            linha = 1 ;// Na segunda volta a linha vale 1 de novo
+            base++ ;// A cada volta é necssário a base crescer mais 1
+            altura--; // A cada volta é necssário a base crescer mais 1
+            }
+        //2°
+        
+            var b = 1;
+            var linha = 1;
+            var base = parseInt(prompt('Digite a base do quadrado')); // 5
+    
+            while (b <= base){
+                while (linha <= base) {
+                if (b == 1 || b == base){
+                    document.write('@');
+                }else{
+                    if (linha == 1) {
+                    document.write('@');
+                    } else {
+                    if (linha == base) {
+                        document.write('@');
+                    } else {
+                        document.write('__');
+                    }
+                    }
+                }
+                linha++;
+                }
+            document.write('<br>');
+            linha = 1;
+            b++;
+            }
+        
+        //3°
+        var b = 1;
+        linha = 1;
+        var base = parseInt(prompt('Digite a base do retângulo')); // 5
+        var altura = parseInt(prompt('Digite a altura do retângulo')); // 5
+    
+        while (b <= altura) {
+        while (linha <= base) {
+            if (b == 1 || b == altura) {
+            document.write('@');
+        } else {
+            if (linha == 1) {
+            document.write('@');
+        } else {
+                if (linha == base) {
+                document.write('@');
+            } else {
+                document.write('__');
+            }
+        }
+        }
+        linha++;
+        }
+        document.write('<br>');
+        linha = 1;
+        b++;
+    
+    }
+    //4°
+      var i = 1;
+      var tabuada = 2;
+
+      while (tabuada <= 9) {
+        document.write('##############');
+        document.write('Tabuada de ' + tabuada);
+        document.write('##############');
+        while (i <= 10) {
+          document.write(
+            '<p>' + tabuada + ' x ' + i + ' = ' + tabuada * i + '<p>')
+          i++;
+        }
+        tabuada++;
+        i = 1;
+      }
+
+      document.write('Fim.');
+    
+    //5°
+        var i = 1;
+        var num = parseInt(prompt('Digite um número.')); // 4
+    
+        while (i <= 10) {
+        document.write('<p>' + num + ' x ' + i + ' = ' + i * num + '<p>');
+        // 4 x 1 = 4
+        i++;
+        }
+        document.write('Fim.');
+    
+    //6°      
+    
+        var i = 1;
+        var tabuada = 2;
+    
+        while (tabuada <= 9) {
+        document.write('##############');
+        document.write('Tabuade de ' + tabuada);
+        document.write('##############');
+    
+        while (i <= 10) {
+        document.write('<p>' + tabuada + ' x ' + i + ' = ' + tabuada * i + '<p>');
+        i++;
+        }
+        tabuada++;
+        i = 1;
+        }
+    
+        document.write('Fim.');
+        
+        //7°
+
+        var vnum=[];
+        var i=0;
+        var valor;
+        var soma;
+        var num=parseInt(prompt("Digite o número para a sua tabuada"));
+
+        while(i<=9){
+            valor = (i+1);//pq começa no índice zero, mas na posição 1, por isso que acrescentei o +1 no i.
+            vnum.push(valor);//acrescenta o prompt na array(vetor).
+            soma=valor*num;
+            document.write(vnum[i] + " x " + num +" = " + soma +".<br>");
+            i++;
+        }*/
+        //8°
+        var  b = 1;
+        var  linha = 1;
+        var base = parseInt(prompt('Digite a altura do triângulo')); // 5
+
+        while (b <= base) {
+          while (linha <= base) {
+          if (b == base) {
+            document.write('@');
+          } else if (linha == 1 || linha == b) {
+            document.write('@');
+          } else {
+            if (linha <= b) {
+              document.write('__');
+            }
+          }
+          linha++;
+        }
+        document.write('<br>');
+        linha = 1;
+        b++;
+      }
+        </script>
+    </body>
+</html>

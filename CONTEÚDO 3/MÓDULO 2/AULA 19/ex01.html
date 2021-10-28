@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            outline: none;
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 500;
+            font-size: 22px;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: burlywood;
+        }
+        input{
+            margin: 2px;
+            border: none;
+            border-radius: 3px ;
+        }
+        input[type=text]{
+            width: calc(100% - 4px);
+            height: 40px;
+        }
+        input[type=button]{
+            width: 100px;
+            height: 50px;
+            transition: ease 0.2s;
+            cursor: pointer;
+        }
+        div#calculadora{
+            box-shadow: 0 0 20px black;
+        }
+        div#calculadora div{
+            display: flex;
+        }
+        div#calculadora div input:nth-child(4){
+            filter: brightness(25%);
+        }
+        div#quarta input:nth-child(1) {
+            background: red;
+            border-bottom-left-radius: 35px;
+        }
+        div#quarta input:nth-child(1) div#calculadora{
+            background: red;
+            border-bottom-left-radius: 35px;
+        }
+        div#quarta input:nth-child(3) {
+            background: blue;
+        }
+        div#quarta input:nth-child(4) div#calculadora{
+            border-bottom-right-radius: 35px;
+        }
+        input[type=button]:hover{
+            filter: brightness(50%);
+        }
+        input[type=button]:active{
+            transform: scale(0.9);
+        }
+    </style>
+    <title>Dever de Casa</title>
+</head>
+<body>
+    <form action="" name="calc">
+        <div id="calculadora">
+            <input type="text" id="visor" name="visor">
+            <div id="primeira">
+                <input type="button" value="7" class="botao" onclick="botao(value)">
+                <input type="button" value="8" class="botao" onclick="botao(value)">
+                <input type="button" value="9" class="botao" onclick="botao(value)">
+                <input type="button" value="/" class="botao" onclick="botao(value)">
+            </div>
+            <div id="segunda">
+                <input type="button" value="4" class="botao" onclick="botao(value)">
+                <input type="button" value="5" class="botao" onclick="botao(value)">
+                <input type="button" value="6" class="botao" onclick="botao(value)">
+                <input type="button" value="*" class="botao" onclick="botao(value)">
+            </div>
+            <div id="terceira">
+                <input type="button" value="1" class="botao" onclick="botao(value)">
+                <input type="button" value="2" class="botao" onclick="botao(value)">
+                <input type="button" value="3" class="botao" onclick="botao(value)">
+                <input type="button" value="-" class="botao" onclick="botao(value)">
+            </div>
+            <div id="quarta">
+                <input type="button" value="C" class="botao" onclick="resetar()">
+                <input type="button" value="0" class="botao" onclick="botao(value)">
+                <input type="button" value="=" class="botao" onclick="calcular()">
+                <input type="button" value="+" class="botao" onclick="botao(value)">
+            </div>
+        </div>        
+    </form>
+    <script>
+            var valor;
+            function botao(num){
+                valor = document.calc.visor.value += num;
+            }
+            function resetar(){
+                document.calc.visor.value = '' ;
+            }
+            function calcular(){
+                resultado = eval(valor);
+                document.calc.visor.value = resultado.toLocaletoString() ;
+            }
+    </script>
+</body>
+</html>

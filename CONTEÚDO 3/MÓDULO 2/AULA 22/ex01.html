@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var frase = "Bom dia, tudo bem com você?";
+
+        for(let i = 0; i< frase.length;i++){
+            document.write("<br> Índice " + i + " da String é " + frase.charAt(i) + ".");
+        }
+
+        document.write("<br> Exibindo todos os caracteres da String, cada caracter em uma linha com índice e posição " + frase + ".");
+    
+        var frase = "Bom dia Step e Alunos na Step.";
+        document.write("String: " + frase);
+        document.write("<br>O tamanha da String é " + frase.length);
+
+        document.write("<br>Localizando \'Bom\', índice = " + frase.indexOf("Bom"));
+        document.write("<br>Localizando \'dia\', índice = " + frase.indexOf("dia"));
+        document.write("<br>Localizando \'Step\', índice = " + frase.indexOf("Step"));
+        document.write("<br>Localizando \'Dia\', índice = " + frase.indexOf("Dia"));
+        document.write("<br>Localizando \'.\', índice = " + frase.indexOf("."));
+        document.write("<br>Localizando \' \', índice = " + frase.indexOf(" "));
+    
+        document.write("<br>Localizando \'Bom\', índice = " + frase.lastIndexOf("Bom"));
+        document.write("<br>Localizando \'dia\', índice = " + frase.lastIndexOf("dia"));
+        document.write("<br>Localizando \'Step\', índice = " + frase.lastIndexOf("Step"));
+        document.write("<br>Localizando \'Dia\', índice = " + frase.lastIndexOf("Dia"));
+        document.write("<br>Localizando \'.\', índice = " + frase.lastIndexOf("."));
+        document.write("<br>Localizando \' \', índice = " + frase.lastIndexOf(" "));
+
+
+        var frase = "Bom dia Step e Alunos na Step.";
+        document.write("String: " + frase);
+        document.write("<br>O tamanha da String é " + frase.length);
+        document.write("<br><br>Comando toUpperCase() = " + frase.toUpperCase());
+        document.write("<br><br>Comando toLowerCase() = " + frase.toLowerCase());
+
+        var frase = "Bom dia Step e Alunos na Step.";
+        document.write("String: " + frase);
+        document.write("<br>O tamanha da String é " + frase.length);
+        document.write("<br>Localizando \'dia\', boolean = " + frase.includes("dia"));
+        document.write("<br>Localizando \'Dia\', boolean = " + frase.includes("Dia"));
+        document.write("<br>Localizando \' dia \', boolean = " + frase.includes(" dia "));
+        document.write("<br>Localizando \'.\', boolean = " + frase.includes("."));
+        document.write("<br>Localizando \' \', boolean = " + frase.includes(" "));
+
+        var frase = "Bom dia Step e Alunos na Step.";
+        document.write("String: " + frase);
+        document.write("<br><br>Comando replace() = " + frase.replace("Bom dia", "Boa Noite"));
+        document.write("<br><br>Comando replace() = " + frase.replace("Step", "stepi"));
+        document.write("<br><br>Comando replace() = " + frase.replace("Alunos", "alunos"));
+        document.write("<br>A String original continua com o mesmo valor: " + frase);
+
+        var frase = "Bom dia Step. ";
+        document.write("String: " + frase);
+        document.write("<br><br>Comando repeat() = " + frase.repeat(5));
+            let frase2 = " Oi alunos da Step ";
+                document.write("<br><br>Comando sem trim() = *" + frase2 + "*");
+                document.write("<br>Comando com trim() = *" + frase2.trim() + "*");
+    </script>
+</body>
+</html>

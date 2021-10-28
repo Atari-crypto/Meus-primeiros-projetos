@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+</head>
+<body>
+    
+
+    
+    
+    
+    
+    
+    
+    <script>
+        /*function escreve(){
+            document.write("Curso de JavaScript - CFB Cursos. <br>");
+        }
+        escreve() //só é executada quando chamada!
+        escreve()
+        escreve()*/
+
+        //Sem o recurso return não é necesssário chamar a função na qual vc quer imprimir:
+        /*function soma(num1,num2){
+            var res= num1 + num2 + "." + "<br>";
+            document.write(res);
+        }
+
+        //por exemplo:
+        soma(5,2);
+        soma(17,2);
+        soma(48,5);*/
+
+
+        //Já com o recurso return, vc deverá chamar a função pela qual vc quer imprimir: 
+        /*function soma(num1,num2){
+            var res= num1 + num2 + "." + "<br>";
+            return res;
+        } */   
+
+        //por exemplo:
+        // vc pode fazer desta forma:
+        /*var res= soma(14,2);
+        document.write(res + "<br>");*/
+
+        //como pode fazer desta também:
+        /*document.write(soma(40,2));*/
+        
+        //agora faremos com Array:
+
+        /*->var numeros=new Array(10,2,5,30,25,19,20,50);
+
+        function media(nums){
+            var tam=nums.length; //obtive o número de elementos
+            var soma=0; //obtive a soma destes elemntos
+            for(var i=0; i<tam; i++){         // i=0 significa que começa pela posição 0 que no caso é 1 
+                soma+=nums[i];                //i<tam significa que   a varíavel tem que ser menor que tam=8 
+            }                                 //i++ significa que ele somará um por um 
+            return Math.round(soma/tam);      // soma+=nums[i] significa que soma receberá seu próprio valor(+=) nums na pos [i]
+        }                                     //return significa que ele retornará soma dividida por tam e 
+        document.write(media(numeros));*/     //colocamos Math.round para arredondar
+                                              //document.write(media(numeros)) significa que ele imprimirá a função media com o Array numeros.
+        
+    </script>
+</body>
+</html>

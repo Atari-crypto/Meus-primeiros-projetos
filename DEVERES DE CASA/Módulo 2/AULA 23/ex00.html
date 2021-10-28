@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Principal</title>
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap);
+        @import url(https://fonts.googleapis.com/css2?família=Nova+Square&display=swap);
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+        
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #banner{
+            background:linear-gradient(#111111,rgba(0,0,0,0.5)), url(imgs/imgcar.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+        .logo{
+            color: #deb887;
+            width: 300px;
+            height: 300px;
+            position: absolute;
+            top: 4%;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            left: 10%;
+            letter-spacing: 3px;
+        }
+        .banner-text{
+            font-family:'Nova Square', cursive;
+            text-align: center;
+            color: #deb887;
+            margin-left: 3%;
+            padding-top: 180px;
+        }
+        .banner-text h1{
+            font-size: 70px;
+        }
+        .banner-text p{
+            font-size: 20px;
+            font-style: italic;
+        }
+        .card{
+            width: 200px;
+            color: #111111;
+            height: 150px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            transition: transform 0.5s;
+            margin-top: 5vh;
+            margin-left: 12%;
+            opacity: 0.8;
+            background: linear-gradient(#d2b48c,#f4a460);
+        }
+        .card:hover{
+            transform: translateY(-20px);
+        }
+        .card a:link{
+            text-decoration: none;
+            font-family: sans-serif;
+            color: #f4a460;
+        }
+        .card a:visited{
+            color: #111111;
+        }
+        .card a:hover{
+            text-decoration: wavy;
+            background-color: #f8d19f;
+        }
+        .card a:active{
+            background-color: #111111;
+        }
+        h5{
+            color: #473b2c;
+            font-size: larger;
+            text-shadow: 0 0 5px #fffaff;
+            margin: 0 0 4px;
+        }
+        /*começando o rodapé
+        footer{
+            position: relative;
+            width: 1691px;
+            height: auto;
+            padding: 10px 110px;
+            background: #111111;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer .container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-left: 100px;
+        }
+        footer .container .sec.aboutus{
+            margin-right: 30px;
+        }
+        footer .container .sec.aboutus{
+            width: 40%;
+        }
+        footer .container h2{
+            position: relative;
+            color: #fffafa;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        footer .container  h2:before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #d2b48c;
+        }
+        footer p{
+            color: #999;
+        }
+        .sci{
+            margin-top: 20px;
+            display: flex;
+        }
+        .sci li{
+            list-style: none;
+        }
+        .sci li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .sci li a:hover{
+            background: #d2b48c;
+        }
+        .sci li a .fa{
+            color: #fffafa;
+            font-size: 20px;
+        }
+        .quickLinks{
+            position: relative;
+            width: 25%;
+        }
+        .quickLinks ul li{
+            list-style: none;
+        }
+        .quickLinks ul li a {
+            color: #999;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .quickLinks ul li a:hover{
+            color: #fffafa;
+        }
+        .contact{
+            width: calc(35% - 60px);
+            margin-right: 0 !important;
+        }
+        .contact .info{
+            position: relative;
+        }
+        .contact .info li{
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .contact .info li span:nth-child(1){
+            color: #fffafa;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .contact .info li span{
+            color: #999;
+        }
+        .contact .info li a {
+            color: #999;
+            text-decoration: none;
+        }
+        .contact .info li a:hover{
+            color: #fffafa;
+        }
+        .copyrightText{
+            width: 100%;
+            background: #222;
+            padding: 2px 140px ;
+            text-align: center;
+            color: #999;
+            height: auto;
+        }
+        .copyrightText span{
+            color: rgba(97, 97, 97, 0.767);
+        }*/
+        /*começa o scroolbar*/
+        ::-webkit-scrollbar{
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #111111;
+            border-radius: 50px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: #d2b48c;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <section id="banner">
+        <div class="logo">
+            <h1>HEFESTO</h1>
+        </div>
+        <div class="banner-text">
+            <h1>Bem Vindo</h1>
+            <p>A mecânica referência.</p>
+        </div>
+        <br>
+        <div class="col">
+            <div class="card card1">
+                <h5>Fale Conosco</h5>
+                <p><a target="_blank" href="/CONTEÚDO 3/MÓDULO 2/AULA 23/ex01.html">Entre em contato conosco</a></p>
+            </div>
+            <div class="card card2">
+                <h5>Agende seu serviço</h5>
+                <p><a target="_blank" href="/CONTEÚDO 3/MÓDULO 2/AULA 23/ex02.html">Escolha nosso serviços</a></p>
+            </div>
+            <div class="card card3">
+                <h5>Encomende sua peça</h5>
+                <p><a target="_blank" href="/CONTEÚDO 3/MÓDULO 2/AULA 23/ex03.html">Temos aqui todas as peças que você quer </a></p>
+            </div>
+            <div class="card card4">
+                <h5>Quiz</h5>
+                <p><a target="_blank" href="/CONTEÚDO 3/MÓDULO 2/AULA 23/ex04.html">Vamos testar seu conhecimento sobre a Fórmula 1</a></p>
+            </div>
+        </div>
+    </section>
+</body>
+<!--<footer>
+    <div class="container">
+        <div class="sec aboutus">
+            <h2>Hefesto</h2>
+            <p>Este é o novo conceito de oficina, que encrementa o conceito do rústico com o comteporâneo.</p>
+        <ul class="sci">
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+        </div>
+        <div class="sec quickLinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Termos & Condições</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contate-nos</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span>646 Rua Diego Muñoz<br>
+                        Hermosa, SP 23560,<br>USA
+                    </span>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <p><a href="tel:123456789">+1 123 456 789</a>
+                    <br><a href="tel:321654987">+1 321 654 987</a></p>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <p><a href="mailto:qwertyu@rod.com">qwertyu@rod.com</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="copyrightText">
+            <p>copyright &copy; 2020 Estolano Enterprises. designed by <span>atari-crypto</span></p>
+        </div>
+    </div>
+</footer>-->
+</html>

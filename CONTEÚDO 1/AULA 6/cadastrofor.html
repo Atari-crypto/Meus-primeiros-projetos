@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Cadastro dos fornecedores</title>
+</head>
+<body>
+    <form name="formEnviodeCAD" id="idFormEnviodeCAD" action="recebido2.html" method="POST">
+    <table>
+        <th>Cadastro do Fornecedor</th>
+        <tr>
+            <td>Código:</td>
+            <td><input type="text" name="txtCodigo2" value="" placeholder="Digite seu código"></td>
+        </tr>
+        <tr>
+            <td>Razão Social:</td>
+            <td><input type="text" name="txtRazaoSocial" value="" placeholder="Digite sua Razão Social"></td>
+        </tr>
+        <tr>
+            <td><input type="radio" name="rbPeca" value=""> Peças</td>
+            <td><input type="radio" name="rbMaquina" value=""> Máquina</td>
+        </tr>
+        <tr>
+            <td>UF:</td>
+            <td>
+                <select name="selUF" id="idFormEnviodeCAD">
+                    <option value=""> Escolha</option>
+                    <option value="R"> RJ</option>
+                    <option value="S"> SP</option>
+                    <option value="M"> MG</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Enviar o Cadastro"></td>
+             <td><input type="reset" value="Limpar Formulário"></td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

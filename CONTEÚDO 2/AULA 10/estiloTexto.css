@@ -1,0 +1,12 @@
+div{
+ background-color: red;   width: 500;
+}
+.nome{
+    color: royalblue;
+    font: italic bold 24px serif;
+    text-decoration: underline;
+    text-align: center;
+}
+.segmento{
+    font-family: serif;
+}

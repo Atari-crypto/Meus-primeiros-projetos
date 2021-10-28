@@ -1,0 +1,55 @@
+#div1{
+        width: 100px;
+        height: 100px;
+        border: 2px solid red;
+        -webkit-transform: matrix(1, 2, -1, 1, 100,200)
+}
+#div2{
+        height: 200px;
+        width: 200px;
+        background-color: lightblue;
+        margin: auto;
+    }
+    .rotate:hover{
+        transform: rotate(800grad);
+        transition: 2s linear ;
+    }
+    
+
+#div3{
+        height: 200px;
+        width: 200px;
+        background-color: lightblue ;
+        margin: 100px;
+        transform: skew(40deg,20deg);
+    }
+
+#div4{
+        width: 100px;
+        height: 100px;
+        border: 2px solid #000;
+        background-color: lightblue;
+    }
+    
+    .translate {
+        width: 100px;
+        height: 100px;
+        transition: transform 2s, background-color 2s;
+    }
+    
+    .translate:hover {
+        background-color: blue;
+        border: 3px solid red;
+        transform: translate(300px, 100px);
+    }
+
+#div5{
+        width: 100px;
+        height: 100px;
+        background-color: lightblue ;
+        border: 2px solid black;
+        margin: auto;
+    }
+    .escale{
+        transform: scale(2.0);
+    }

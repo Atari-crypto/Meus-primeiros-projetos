@@ -1,0 +1,10 @@
+div{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue ;
+    border: 2px solid black;
+    margin: auto;
+}
+#escala{
+    transform: scale(2.0);
+}

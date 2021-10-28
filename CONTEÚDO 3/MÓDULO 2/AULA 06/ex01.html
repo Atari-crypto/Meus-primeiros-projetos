@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios</title>
+</head>
+<body>
+    <script>
+        /*//1°
+
+        var menor;
+
+        var n1 = parseFloat(prompt("Digite o 1° número:"));
+        menor = n1;
+
+        var n2 = parseFloat(prompt("Digite o 2° número:"));
+        if(n2<menor){
+            menor= n2;
+        }
+
+        var n3 = parseFloat(prompt("Digite o 3° número:"));
+        if(n3<menor){
+            menor= n3;
+        }
+
+        document.write(`${menor} é menor número.`);//está é uma forma de concatenar de maneira diferente!*/
+
+        //2°
+         
+
+        //var num =parseInt(prompt("Digite um número"));
+
+        /*if(num%2 == 0){
+            alert("Este número é par!");
+        }else{
+            alert("Este número é ímpar!");
+        }
+
+        alert("Fim do Programa!");*/
+
+        //3°
+
+        var nota= parseFloat(prompt("Digite sua nota"));
+
+        if(nota>0){
+            //é positivo
+            alert(`${nota} é positivo, estás aprovado!`);
+        }else if(nota==0){
+            //é nulo
+            alert(`${nota} é nulo, estás em recuperação!`);
+        }else{
+            //(nota<0) não há necessidade desta condição pq as duas acima já demarcam as condições, só sobraria esta para else demarcar e processar.
+            //é negativo
+            alert(`${nota} é negativa, estás reprovado!`);
+        }
+
+        
+
+
+    </script>
+</body>
+</html>

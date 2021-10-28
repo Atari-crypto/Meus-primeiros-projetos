@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever de aula</title>
+</head>
+<body>
+	<h1>Carrossel de imagens()</h1>
+		<p>Evento - onclick </p>
+			<img src="" alt="imagem em branco" id=itela width="280px" height="200px">
+		<br>
+			<input type="button" value="<<" name="b1" id="ibotao1" onclick="anterior()">
+			<input type="button" value=">>" name="b2" id="ibotao2" onclick="proximo()">
+<script>
+	var i = 0; // variável que controla o indice
+	var imagens = []; // crição de vetor de caminhos de imagens 
+		imagens.push("./imagens/img1.jpg");
+		imagens.push("./imagens/img2.jpg");
+		imagens.push("./imagens/img3.jpg");
+		imagens.push("./imagens/img4.jpg");
+		function anterior() {
+		i--;
+		document.getElementById("itela").src = imagens[i];
+		}
+		function proximo() {
+		i++;
+		document.getElementById("itela").src = imagens[i];
+		} 
+		
+	// if (i<imagens.length-1){
+	// i++;
+	//}
+	//if(i>0){
+	// i--;
+	//}
+	/* no style do css
+	
+	 img{
+	color: yellow;
+	background : blue;
+	transition: 4s;
+	}
+	
+	no JS
+	
+	document.getElementById(" ").style.transition ="5s"
+	document.getElementById(" ").style.color = ""
+	document.getElementById(" ").style.visibility ="" => 
+	"visible|hidden|collapse|initial|inherit"
+	document.getElementById(" ").style.transitionDuration = "1s";
+	document.getElementById(" ").style.width = "300px";
+	document.getElementById(" ").style.marginTop = "50px";
+	document.getElementById("").style.fontFamily = "Impact,Charcoal,sans-serif";
+	document.getElementById(" ").style.animationDelay = "1s";
+	document.getElementById(" ").style.border = "thick solid #0000FF";
+	document.getElementById("").style.borderRadius = "25px";
+	*/
+
+	//outra forma de fazer
+	
+	
+	
+	
+</script>
+	
+</body>
+</html>

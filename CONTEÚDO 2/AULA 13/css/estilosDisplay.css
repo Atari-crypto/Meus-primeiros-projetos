@@ -1,0 +1,34 @@
+body{
+    font-size: 32px;
+}
+.nome-empresa{
+    background-color: pink;
+
+}
+.segmento-empresa{
+    background-color: red;
+}
+.curso-html{
+    display: inline;
+    background-color: green;
+}
+.curso-css{
+    background-color: yellow;
+    display: none;
+}
+.curso-java{
+    background-color: orange;
+}
+.curso-angular{
+    background-color: paleturquoise;
+}
+.nome-empresa,.segmento-empresa{
+    display: block;
+    height: 100px;
+    width: 300px;
+}
+.curso-java,.curso-angular{
+    display: inline-block ;
+    height: 100px;
+    width: 300px;
+}

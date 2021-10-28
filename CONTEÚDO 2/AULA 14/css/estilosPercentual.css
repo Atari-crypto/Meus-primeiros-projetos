@@ -1,0 +1,10 @@
+html{
+    font-size: 75%;
+    /*10px=10/ 16*100=62.5% */
+}
+p{
+    font-size: 100%;
+}
+h1{
+    font-size: 100%; ;
+}

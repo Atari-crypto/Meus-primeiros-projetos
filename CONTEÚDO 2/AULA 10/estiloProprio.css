@@ -1,0 +1,12 @@
+table{
+    color: royalblue;
+    text-align: justify;
+    text-decoration: silver;
+    font-family: monospace;
+}
+table > tr{
+    color: slategrey;
+    text-align: justify;
+    text-decoration: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

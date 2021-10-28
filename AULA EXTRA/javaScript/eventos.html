@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-event.css">
+    <script>
+        //eventos são quaisquer ação do usuário dentro da página de interação com a prórpia ou com alguns elementos da mesma.
+        //posso associar os comandos a este evento, executa-lá apenas quando houver o evento demarcado.
+
+        function mudaCor(obj,cor){
+            obj.style.backgroundColor=cor;
+        }        
+
+        function mudaPos(obj){
+            obj.style.position="absolute";
+            obj.style.left=Math.random()*500+"px";
+            obj.style.top=Math.random()*500+"px";
+        }
+
+        function ola(){
+            var data=new Date();
+            var hora=data.getHours();
+            var txt="";
+            if(hora < 12){
+                txt="Bom Dia";
+            }else if(hora < 18){
+                txt="Boa Tarde";
+            }else{
+                txt="Boa Noite";
+            }
+            alert("Olá, " + txt);
+                
+
+        }
+
+
+    </script>
+    <title>Eventos</title>
+</head>
+
+<body onload="ola()">
+    
+    <div id="div1" onmouseover="mudaCor(this,'red')" onmouseout="mudaCor(this,'white')"></div>
+    <br>
+    <button onclick="alert('CFB CURSOS')" onmouseover="mudaPos(this)"><!--o comando onclick significa que ao clicar na button ele vai seguir com a ação descrita na funçao no javascript-->
+        Clique Aqui
+    </button>
+
+   
+   <!--mudaCor(document.getElementById('div1'),'blue')!-->
+   
+</body>
+</html>

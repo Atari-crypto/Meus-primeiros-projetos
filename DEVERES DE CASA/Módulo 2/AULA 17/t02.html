@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa n°2</title>
+</head>
+<body>
+    <script>
+        var b = 1;
+        var linha = 1;
+        var base = altura = parseInt(prompt('Digite a base do quadrado')); 
+
+        
+        function fazerQuadrado(altura) {
+            
+                
+            while (b <= altura) {
+                while (linha <= base) {
+                        if (b == 1 || b == altura) {
+                            document.write('@');
+                    } else {
+                            if (linha == 1) {
+                                document.write('@');
+                        } else {
+                                if (linha == base) {
+                                    document.write('@');
+                            } else {
+                                    document.write('__');
+                                }
+                    }
+                }
+                linha++;
+            }
+            document.write('<br>');
+            linha = 1;
+            b++;
+        
+        }
+        
+            
+        }
+
+    fazerQuadrado(altura);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios</title>
+</head>
+<body>
+    <script>
+
+        //6°:
+        
+        var elemento=prompt("Digite uma letra");
+
+        function descobrirVogal(){
+            if( elemento === "a"||elemento =="e"||elemento== "i"||elemento == "o"||elemento== "u"||elemento== "A"||elemento == "E"||elemento == "I"||elemento == "O"||elemento == "U"){
+                document.write("Isto é uma vogal.");
+            }else{
+                document.write("Isto não é uma vogal");
+            }
+            
+        }
+
+
+        descobrirVogal(elemento);
+
+
+        document.write("<hr>");
+
+        //7°:
+
+        var elemento=prompt(`Digite um caracter.`);
+
+        function descobrirNumero(){            
+            if (elemento>=0){
+                document.write(`Este ${elemento} é um número.`);
+            }else{
+                document.write(`Este ${elemento} não é um número.`);
+            }
+            
+        }
+
+        descobrirNumero(elemento);
+        
+
+    </script>
+</body>
+</html>

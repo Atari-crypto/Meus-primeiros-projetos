@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever de Aula</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+    //Desafio 1°:
+
+        var base = parseInt(prompt("Digite a base"));
+        var altura = parseInt(prompt("Digite a altura"));
+
+        var i =1 ; // i vai controlar a base
+        var j = 1; // j vai controlar a altura
+
+        while(j <= altura){
+            i=1;
+            while(i<=base){
+                //  document.write("@");
+                document.write("("+ i +","+ j + ") ")
+                i++;
+            }
+            document.write("<br>");
+            j++;
+        }
+
+    var base = parseInt(prompt("Digite a base"));
+    var altura = parseInt(prompt("Digite a altura"));
+
+    var i =1 ; // i vai controlar a base
+    var j = 1; // j vai controlar a altura
+
+    document.write("Base = " + base + "<br>");
+    document.write("Altura = " + altura + "<br>");
+    document.write(" (i ,j)   onde i controla a base e j controla a altura <br>");
+
+    while(j <= altura){
+
+        i=1;
+        while(i<=base){
+        //  document.write("@");
+            document.write("("+ i +","+ j + ") ");
+            i++;
+        }
+        document.write("<br>");
+        j++;
+    }
+
+    //Desafio 2°:
+    
+    var altura = parseInt(prompt("Digite a altura"));
+
+    var i =1 ; // i vai controlar a base
+    var j = 1; // j vai controlar a altura
+
+    document.write("Base = " + base + "<br>");
+    document.write("Altura = " + altura + "<br>");
+    document.write(" (i ,j)   onde i controla a base e j controla a altura <br><br>");
+
+    while(j <= altura){
+
+        i=1;
+        while(i<=j){
+            //  document.write("@");
+            document.write("("+ i +","+ j + ") ");
+            i++;
+        }
+
+        document.write("<br>");
+        j++;
+    }
+    </script>
+</body>
+</html>

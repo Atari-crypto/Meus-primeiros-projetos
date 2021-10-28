@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+<body>
+    <script>
+    
+        //var cor1, cor2, cor3, cor4;
+        // var cor = new Array(); ou
+        // var itens = ["faca","pederneira","corda","lanterna","luvas","chave","arame"];
+        //var mochila = [];
+        //mochila.push(itens[mochila[2]]);
+        var cor = [];
+
+        cor.push ("Azul");
+        cor.push ("branco");
+        cor.push ("preto");
+        cor.push ("verde");
+        cor.push ("vermelho");
+
+        document.write(cor[0]);
+
+        /*ou
+        cor[0] = "preto";
+        cor[1] = "branco";
+        cor[2] = "vermelho";
+        cor[3] = "verde";
+        cor[4] = "azul";
+        document.write(cor[0]);
+        */
+
+    </script>
+
+
+    exemplos com splice, shift e pop
+    <script>
+        
+            
+            var mochila = [];
+            mochila.push("faca");
+            mochila.push("corda");
+            mochila.push("pederneira");
+            mochila.push("chave");
+            mochila.push("lanterna");
+            mochila.unshift("pedra");//vai pro inicio da array
+
+            //mochila.pop();//remove o ultimo (lanterna)
+            //mochila.shift();//remove o primeiro (pedra)
+
+            mochila.splice(2,1)//a partir do indice 2, só o item que agora é indice 2 (só ele "1").
+            
+            document.write(mochila[0] + "<br>");
+            document.write(mochila[1] + "<br>");
+            document.write(mochila[2] + "<br>");
+            document.write(mochila[3] + "<br>");
+            document.write(mochila[4] + "<br>");
+            document.write(mochila[5] + "<br>");
+
+        </script>
+    com sort, reverse, indexOf, Join
+    <script>
+        
+            
+            /*var mochila = [], pos;
+            mochila.push("faca");
+            mochila.push("corda");
+            mochila.push("pederneira");
+            mochila.push("chave");
+            mochila.push("lanterna");
+            mochila.push("pedra");
+            
+            pos = mochila.indexOf("Lanterna");//retornou indice 4. Se não tiver ele retorna -1.
+
+            if(pos<0){
+                document.write("Intem não está na Mochila<br>");
+            }else{
+                document.write("Item está na mochila<br>Posição: " + pos);
+            }*/
+
+            var num = [5,8,4,9,7,6,3,0,2,1];
+            var numeros;
+
+            num.sort();//ordem crescente
+            num.reverse();//e depois inverteu (virando decrescente, se colocasse apenas o reverse ele não faria o mesmo efeito)
+            
+            numeros=num.join();//agora eu coloquei toda a array em uma outra var numeros
+            document.write(numeros+"<br><br>");
+
+            document.write(num[0]+"<br>");
+            document.write(num[1]+"<br>");
+            document.write(num[2]+"<br>");
+            document.write(num[3]+"<br>");
+            document.write(num[4]+"<br>");
+            document.write(num[5]+"<br>");
+            document.write(num[6]+"<br>");
+            document.write(num[7]+"<br>");
+            document.write(num[8]+"<br>");
+            document.write(num[9]+"<br>");
+
+        </script>
+
+    concat e lenght
+    <script>
+            var mochila = [], mochila1 = [], mochila2 =[], pos;
+            var mochila = [];
+            mochila1.push("faca");
+            mochila1.push("corda");
+            mochila1.push("pederneira");
+            mochila1.push("chave");
+            mochila1.push("lanterna");
+            mochila1.push("pedra");
+            
+
+            var mochilas = [];
+            mochila2.push("arame");
+            mochila2.push("luvas");
+            mochila2.push("joelheira");
+            mochila2.push("meias");
+            mochila2.push("moeda");
+            mochila2.push("canivete");
+
+            mochila = mochila1.concat(mochila2);
+            document.write(mochila[0]+"<BR>");
+            document.write(mochila[1]+"<BR>");
+            document.write(mochila[2]+"<BR>");
+            document.write(mochila[3]+"<BR>");
+            document.write(mochila[4]+"<BR>");
+            document.write(mochila[5]+"<BR>");
+            document.write(mochila[6]+"<BR>");
+            document.write(mochila[7]+"<BR>");
+            document.write(mochila[8]+"<BR>");
+            document.write(mochila[9]+"<BR>");
+            document.write(mochila[10]+"<BR>");
+            document.write(mochila[11]+"<BR>");
+
+            document.write("tamanho da mochila 1: " + mochila1.length + "<br>");
+            document.write("tamanho da mochila 2: " + mochila2.length + "<br>");
+            document.write("tamanho da mochila total: " + mochila.length + "<br>");
+        </script>
+
+</body>
+</html>

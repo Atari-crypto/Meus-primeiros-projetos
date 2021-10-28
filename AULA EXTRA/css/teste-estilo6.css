@@ -1,0 +1,13 @@
+div {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-duration: 10s;
+    animation-name: example;
+    animation-delay: 2s;
+  }
+  @keyframes example {
+    from {background-color: red;}
+    to {background-color: yellow;}
+  }

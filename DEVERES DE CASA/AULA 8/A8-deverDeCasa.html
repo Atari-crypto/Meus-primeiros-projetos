@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="A8-estilo.css">
+        <title>Envio de Currículos</title>
+    </head>
+    <body>
+        <h1>Insira seus dados pessoais:</h1>
+         <table>
+
+                <th>Nome Completo:</th>
+                <th>Nome Social:</th>
+                <tr>
+                     <td> <Form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtnomecompleto" value="" placeholder="Digite seu nome completo">
+                    </Form></td> 
+                
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtnomesocial" value="" placeholder="Digite seu nome social">
+                    </form></td>
+                </tr>
+
+                <th>Sexo:</th> 
+                <th>Email:</th> 
+                <tr>
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtsexo" value="" placeholder="Digite seu sexo">
+                    </form></td>
+                 
+                    <td><form action="A8-recebido.html" method="POST">
+
+                     <input type="text" name="txtemail" value="" placeholder="Digite seu email">
+                    </form></td>
+                </tr>
+                <th>Casado ?</th>
+                <th>Contato:</th> 
+                <tr>
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtcontato" value="" placeholder="Digite seu contato">
+                    </form></td>
+                
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="checkbox" name="chkCasado1" value="2"> sim
+                        <input type="checkbox" name="chkCasado2" value="2"> 
+                        não
+                    </form></td>  
+                </tr>
+        
+                <th>Nome do Cônjuge:</th>
+                <th>Possuí filhos(as) ?</th>
+                <tr>
+                    <td><form>
+                        <input type="checkbox" name="chkpossuirfilhos1" value="1"> sim
+                         <input type="checkbox" name="chkpossuirfilhos2" value="1"> não
+                    </form></td> 
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtconjuge" value="" placeholder="Digite o nome do cônjuge">
+                    </form></td>
+                    <td><form action="A8-recebido.html" method="POST">
+                    </form></td>
+                </tr> 
+                    
+                <th colspan="3">Endereço:</th>
+                <tr>
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtlogradouro" value="" placeholder="Digite seu logradouro">
+                    </form></td>
+                    
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtcidade" value="" placeholder="Digite a sua cidade">
+                    </form></td>
+                    
+                    <td colspan="2"><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtcomplemento" value="" placeholder="Digite seu complemento">
+                    </form></td>
+                </tr>
+                    
+                <tr>
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtnumero" value="" placeholder="Digite seu número">
+                    </form></td>
+                    
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtbairro" value="" placeholder="Digite seu bairro">
+                    </form></td>
+
+                    <td colspan="2"><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtUF" value="" placeholder="Digite seu UF">
+                    </form></td>
+                </tr>
+                
+            <th >Possui Carro?</th>
+            <th >Precisa de bilhete único?</th>
+            
+                <tr>
+                     <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="checkbox" name="chkCarro1" value="1"> sim
+                        <input type="checkbox" name="chkCarro2" value="1"> não
+                    </form></td>
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="checkbox" name="chkbilhete1" value="1"> sim
+                        <input type="checkbox" name="chkbilhete2" value="1"> não
+                    </form></td> 
+                </tr>    
+                <th>Sua Profissão:</th>
+                <tr>
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtprofissao" value="" placeholder="Digite sua profissão">
+                    </form></td>
+                </tr>
+        
+            <th colspan="4">Experiência:</th>
+            <tr>
+            <th>Nome da Empresa</th>
+            <th>Função</th> 
+                <tr>
+
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtnomedaempresa" value="" placeholder="Digite o nome ">
+                    </form></td>
+                    
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtfuncao" value="" placeholder="Digite a sua função">
+                    </form></td>
+                </tr>
+                
+                <tr>
+                    <th> Descrição de Atividade</th>
+                    <th colspan="3">
+                    Data inicial,Final ou Empresa atual
+                    </th>
+                 </tr>
+                <tr> 
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="text" name="txtdescricao" value="" placeholder="Digite sua descrição">
+                    </form></td>
+
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="date" name="txtdatainicio" value="">
+                    </form></td>
+                    
+                    <td><form action="A8-recebido.html" method="POST">
+
+                        <input type="date" name="txtdatafinal" value="">
+                    </form></td>
+                    <td class="vermelho"><form>
+                        <input  type="checkbox" name="chkempresaatual" value="1"> Empresa Atual
+                    </form></td>
+                </tr>  
+                
+                <tr>
+                    <th>Nome da Empresa</th>
+                    <th>Função</th> 
+                        <tr>
+        
+                            <td><form action="A8-recebido.html" method="POST">
+        
+                                <input type="text" name="txtnomedaempresa" value="" placeholder="Digite o nome ">
+                            </form></td>
+                            
+                            <td><form action="A8-recebido.html" method="POST">
+        
+                                <input type="text" name="txtfuncao" value="" placeholder="Digite a sua função">
+                            </form></td>
+                        </tr>
+                        
+                        <tr>
+                            <th> Descrição de Atividade</th>
+                            <th colspan="3">
+                            Data inicial,Final ou Empresa atual
+                            </th>
+                         </tr>
+                        <tr> 
+                            <td><form action="A8-recebido.html" method="POST">
+        
+                                <input type="text" name="txtdescricao" value="" placeholder="Digite sua descrição">
+                            </form></td>
+        
+                            <td><form action="A8-recebido.html" method="POST">
+        
+                                <input type="date" name="txtdatainicio" value="">
+                            </form></td>
+                            
+                            <td><form action="A8-recebido.html" method="POST">
+        
+                                <input type="date" name="txtdatafinal" value="">
+                            </form></td>
+                            <td class="vermelho"><form>
+                                <input type="checkbox" name="chkempresaatual" value="1"> Empresa Atual
+                            </form></td>
+                        </tr> 
+                        <tr>
+                            <th>Nome da Empresa</th>
+                            <th>Função</th> 
+                        </tr>    
+                                <tr>
+                
+                                    <td><form action="A8-recebido.html" method="POST">
+                
+                                        <input type="text" name="txtnomedaempresa" value="" placeholder="Digite o nome ">
+                                    </form></td>
+                                    
+                                    <td><form action="A8-recebido.html" method="POST">
+                
+                                        <input type="text" name="txtfuncao" value="" placeholder="Digite a sua função">
+                                    </form></td>
+                                </tr>
+                                
+                                <tr>
+                                    <th> Descrição de Atividade</th>
+                                    <th colspan="3">
+                                    Data inicial,Final ou Empresa atual
+                                    </th>
+                                 </tr>
+                                <tr> 
+                                    <td><form action="A8-recebido.html" method="POST">
+                
+                                        <input type="text" name="txtdescricao" value="" placeholder="Digite sua descrição">
+                                    </form></td>
+                
+                                    <td><form action="A8-recebido.html" method="POST">
+                
+                                        <input type="date" name="txtdatainicio" value="">
+                                    </form></td>
+                                    
+                                    <td><form action="A8-recebido.html" method="POST">
+                
+                                        <input type="date" name="txtdatafinal" value="">
+                                    </form></td>
+                                    <td class="vermelho"><form>
+                                        <input type="checkbox" name="chkempresaatual" value="1"> Empresa Atual
+                                    </form></td>
+                                </tr>  
+                               
+         </table> 
+      </body> 
+      <br>  
+      <footer id="idfooter">
+         <a href="A8-recebido.html"><input type="submit" value="Confirmar"></a>
+     </footer>
+</html>

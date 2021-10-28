@@ -1,0 +1,6 @@
+div{
+    border: solid;
+    background-color: sienna;
+    box-sizing: content-box;
+    margin: 5px;
+}

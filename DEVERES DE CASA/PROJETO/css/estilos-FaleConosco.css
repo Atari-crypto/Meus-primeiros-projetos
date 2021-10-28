@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color:#141414 ;
+}
+footer{
+    background-color: #F6FBFB;
+    text-align: center;
+    padding: 10px;
+    margin-top: 8%;
+}
+img{
+    border: none;
+}
+header{
+    background-color: black;
+    width: 100%;
+    height: 150px;
+    border: goldenrod 2px dashed;
+    padding: 5px;
+}
+.container{
+    width: 80%;
+    margin: 80px auto;
+}
+.container h1{
+    padding: 60px 0;
+    color: #F6FBFB;
+    font-size: 44px;
+    text-align: center ;
+    border-radius: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.col1{
+    flex-basis:50%;
+    min-width: 250px; 
+    opacity: initial;
+}
+.col2{
+    flex-basis:50%;
+    min-width: 250px; 
+    background-color:goldenrod ;
+    opacity: initial;
+    box-shadow:  5px 5px 5px burlywood;
+}
+.feature-img{
+    width: 83%;
+    margin: auto;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden ;
+}
+label{
+    margin: 5px;
+}
+.small-img-row{
+    display: flex;
+    margin: 20px 0;
+    align-items: center;
+    margin-left: 10%;
+    border-radius: 6px;
+    overflow: hidden;
+    width: 85%;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #F6FBFB;
+}
+  
+  /* Navbar links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #141414;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+
+}
+  
+  /* Links - change color on hover */
+.topnav a:hover {
+    background-color: #141414;
+    color: goldenrod;
+    transform-origin: left;
+    transform: scaleX(1);
+}

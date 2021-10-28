@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-addEventListener.css">
+    <script>
+
+        var px=0;//x para esquerda é negativo, e para direita é positivo.
+        //lembre-se do plano cartesiano
+        var py=0;//y para baixo é negativo, para cima é positivo.
+
+        //forma 1:
+        /*document.addEventListener("keydown",function(event){
+            var obj=document.getElementById("div1");
+            var tecla=event.keyCode;
+            //37=esquerda -38=cima- 39=direita - 40=baixo
+            if(tecla==37){
+                px-=10;
+                obj.style.left=px+"px";
+            }else if(tecla==38){
+                py-=10;
+                obj.style.top=py+"px";
+            }else if(tecla==39){
+                px+=10;
+                obj.style.left=py+"px";
+            }else if(tecla==40){
+                py+=10;
+                obj.style.top=py+"px";
+            }
+        });*/
+
+        //forma 2:
+        /*function move(){
+            var obj=document.getElementById("div1");
+            var tecla=event.keyCode;
+            //37=esquerda -38=cima- 39=direita - 40=baixo - 13=enter.
+            if(tecla==37){
+                px-=10;
+                obj.style.left=px+"px";
+            }else if(tecla==38){
+                py-=10;
+                obj.style.top=py+"px";
+            }else if(tecla==39){
+                px+=10;
+                obj.style.left=py+"px";
+            }else if(tecla==40){
+                py+=10;
+                obj.style.top=py+"px";
+            }else if(tecla==13){
+                alert("Evento Keydown Removido");
+                this.removeEventListener("keydown",move);
+                //o código acima fez com que o evento keydown fosse removido ao aperta a tecla enter, puxou a função move com .this(por estar na mesma função ou document) e a condição else if.
+            }
+        }
+        document.addEventListener("keydown",move);*/
+
+        var divMove = document.getElementById("div1");
+            divMove.addEventListener("click", Mover);
+
+function Mover(){
+    alert("Evento keydown adicionado!");
+    divMove.style.backgroundColor = "red";
+    document.addEventListener("keydown", function Move(){
+        var tecla = event.keyCode;
+        if(tecla == 40) {
+            py += 30;
+            divMove.style.top = py + "px";
+        } else if (tecla == 38){
+            py -= 30;
+            divMove.style.top = py + "px" ;
+        } else if (tecla == 37){
+            px -= 30;
+            divMove.style.left = px + "px";
+        } else if (tecla == 39){
+            px += 30;
+            divMove.style.left = px + "px";
+        } else if (tecla == 13){
+            alert("Evento keydown removido :(");
+            divMove.style.backgroundColor = "white";
+            document.removeEventListener("keydown", Move );
+            divMove.addEventListener("click", Mover) 
+        }
+    });
+}  
+
+        
+    </script>
+    <title>Add Event Listener 2</title>
+</head>
+<body>
+    <div id="div1">
+
+    </div>
+</body>
+</html>

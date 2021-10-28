@@ -1,0 +1,157 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+span{
+    font-size: 30px;
+}
+.Form--div{
+    display: flex;
+    flex-direction: column;
+}
+footer{
+    background-color: #F6FBFB;
+    text-align: center;
+    padding: 10px;
+}
+header{
+    background-color: black;
+    padding: 5px;
+    width: 100%;
+    height: 150px;
+    border: goldenrod 2px dashed;
+}
+.topnav {
+    overflow: hidden;
+    background-color: #F6FBFB;
+}
+  
+  /* Navbar links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #141414;
+    text-align: center;
+    padding: 12px 14px;
+    text-decoration: none;
+    
+}
+  
+  /* Links - change color on hover */
+.topnav a:hover {
+    background-color: #141414;
+    color: goldenrod;
+}
+
+
+.form__input{
+    width: 40%;
+    outline: none;
+    padding: 0.7rem;
+    border-radius: 0.2rem;
+    border: 1px solid chocolate;
+}
+.form__label{
+    font-weight: 600;
+}
+.Form--div span{
+    font-size: small ;
+    font-weight: 600;
+    color: rgb(1, 60, 99);
+    cursor: pointer;
+}
+.Form--div span:hover{
+    color: #141414;
+}
+.Form-Submit{
+    width: 80%;
+    height: 15%;
+    background-color: chocolate ;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: whitesmoke;
+    cursor:pointer;
+    transition: all 0.3s linear;
+}
+.Form-Submit:hover{
+    background-color: whitesmoke;
+    background-color: tomato;
+}
+.image-Form-Container{
+    width: 39%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/*@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");*/
+
+.Login-Form-Container{
+    width: 100%;
+    height: 100vh;
+    background-color:#141414;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.Login-Form{
+    width: 60%;
+    height: 60%;
+    background-color: burlywood;
+    display: flex ;
+    justify-content: space-between;
+    box-shadow: 0 0 20px #F6FBFB;
+}
+.Form-Container{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Form-title{
+    width: 50%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding-left: 4rem;
+}
+.Form{
+    width: 85%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 4rem;
+}
+@media only screen and (max-width: 600px) {
+    .Login-Form{
+        width: 100%;
+        height: 70%;
+    }
+    .form__input{
+        width: 60%;
+        outline: none;
+        padding: 0.7rem;
+        border-radius: 0.2rem;
+        border: 5px solid goldenrod;
+    }
+    .Form-Submit{
+        font-size: 0.9rem;
+    }
+    .form__label{
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .Form--div span{
+        font-size: 0.65rem;
+    }
+}

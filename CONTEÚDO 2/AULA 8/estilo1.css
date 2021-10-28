@@ -1,0 +1,16 @@
+.caixa1{
+    color: teal;
+    background-color: tomato;
+}
+.caixa2{
+    color: rgba(50, 168, 82, 0.59);
+    background-color: rgba(168, 10, 34, 0.59);
+}
+.caixa3{
+    color: rgba(168, 34, 157, 0.45);
+    background-color: rgba(74, 74, 168, 0.45);
+}
+.caixa4{
+    color: rgba(176, 173, 0, 0.45) ;
+    background-color: rgba(74, 74, 168, 0.45);
+}

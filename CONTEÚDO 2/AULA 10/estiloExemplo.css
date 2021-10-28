@@ -1,0 +1,18 @@
+#txtTitulo{
+    color: burlywood;
+}
+.importante{
+    background-color: chocolate;
+}
+.destaque{
+    color: darkgoldenrod;
+}
+body > p{
+    background-color: darkgreen;
+}
+article > .filho > strong {
+color: brown;
+}
+article > div > .filho {
+    color: red;
+}

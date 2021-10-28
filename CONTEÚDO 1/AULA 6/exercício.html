@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title> Revisão Exercício Aula 06</title>
+</head>
+<body>
+    <form id="idFormEnvioCV" name="formEnvioCV" action="recebido.html" method="POST">
+        <table>
+            <th>Envio de Currículo</th>
+            <tr>
+                <td>Nome Completo:</td>
+                <td> <input type="text" name="txtNomeCompleto" value="" placeholder="Digite o nome completo"></td>
+            </tr>
+            <tr>
+                <td>Nome Social:</td>
+                <td><input type="text" name="txtNomeSocial" value="" placeholder="Digite o nome social"></td>
+            </tr>
+            <tr>
+                <td>Gênero:</td>
+                <td><input type="radio" name="rbGeneroMasc" value="M"> Masculino</td>
+                <td><input type="radio" name="rbGeneroFem" value="F"> Feminino</td>
+                <td><input type="radio" name="rbGeneroOut" value="O"> Outros</td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email name" name="txtEmail" value="" placeholder="Digite o seu email"></td>
+            </tr>
+            <tr>
+                <td>Celular:</td>
+                <td><input type="radio" name="rbCasadoS" value="S"> Sim</td>
+                <td><input type="radio" name="rbCasadoN" value="N"> Não</td>
+            </tr>
+            <tr>
+                <td> Precisa de Auxílio Transporte ? <br>
+                    <select name="selAuxilioTransporte">
+                        <option value=""> Escolha</option>
+                        <option value="S"> Sim</option>
+                        <option value="N"> Não</option>
+                    </select>
+                </td>
+            </tr> 
+            <tr>
+                <td> <input type="submit" value="Enviar o Currículo"></td>
+                <td> <input type="reset" value="Limpar Formulário"></td>
+            </tr>
+        </table>
+    </form>
+    
+</body>
+</html>

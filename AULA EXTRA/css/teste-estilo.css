@@ -1,0 +1,8 @@
+.linhasAlternadas {
+    border-collapse: collapse;
+    background: #FFFFF0;
+    border: solid green 1px;
+}
+  .linhasAlternadas tr:nth-child(even) {
+    background: #F0FFFF;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa de Casa n°2</title>
+</head>
+<body>
+    
+    <script>
+        //linha=altura / coluna = comprimento.
+        var linha = 1;
+        var qntLinha =parseInt(prompt("Digite o número da altura desejada:"));
+        var coluna= 1;
+        var qntColuna=parseInt(prompt("Digite o número do comprimento desejado:"));
+    while(linha<= qntLinha){
+
+    coluna=1;
+        while(coluna<=qntColuna){
+            document.write("@");
+            coluna++;
+        }
+
+    document.write("<br>");
+    linha++;
+}
+    </script>
+</body>
+</html>

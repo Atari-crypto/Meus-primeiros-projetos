@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/estilos.css">
+    <title>Formulário com CSS</title>
+    <style>
+        h1 { color: red;}
+        p { color: seagreen;}
+        em { color: yellow;}
+        strong {color: blue;}
+        form { background-color: wheat;}
+    </style>
+</head>
+<body>
+    <table>
+        <h1>Formulário de Cadastro</h1>
+        <p>
+           <em>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci saepe a quibusdam nulla voluptates </em><strong>cupiditate modi assumenda, vero asperiores, rerum similique accusantium placeat quam id</strong>  necessitatibus, quidem at aliquid excepturi.
+        </p>
+        <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illum vero itaque ut neque <em> expedita alias et sapiente minima? Error deleniti aspernatur</em> <strong>dicta nam quidem molestias veniam perferendis possimus non dolorem!</strong> 
+        </p>
+        <p>
+            Lorem ipsum dolor <em> sit amet consectetur adipisicing elit.</em> Laudantium at dolor expedita harum laboriosam fugiat. <strong> Ut sit officia dolorem laborum exercitationem, non earum natus, nulla veritatis, sequi vero odio voluptas?</strong>
+        </p>
+        <form>
+            <th>Formulário</th>
+            <tr>
+                <td>Nome</td>
+                <td><input type="text" id="idNome" placeholder="Digite seu Nome"></td>
+            </tr>
+            <tr>
+                <td>UF</td>
+                <td><select name="Uf" id="UFopcoes">
+                
+                <option value="" id="UFescolha">Escolha</option>
+                <option value="R" id="UFRJ">RJ</option>
+                <option value="S" id="UFSP"> SP</option>
+                <option value="M" id="UFMG"> MG</option>
+                </select></td>
+            </tr>
+            <tr>
+                <td>Logradouro</td>
+                <td><input type="text" id="Logradouro" placeholder="Digite seu logradouro"></td>
+            </tr>
+            <tr>
+                <td>Bairro</td>
+                <td><input type="text" id="Bairro" placeholder="Digigte seu Bairro"></td>
+            </tr>
+            <tr>
+                <td>Cidade</td>
+                <td><input type="text" id="Cidade" placeholder="Digite da Cidade"></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><input type="text" id="Email" placeholder="Digite seu email"></td> 
+            </tr>
+            <tr>
+                <td>Gênero</td>
+                <td><input type="radio" id="Mgenero" value="M"> Masculino</td>
+            </tr>
+        </form>
+    </table>
+    
+</body>
+</html>

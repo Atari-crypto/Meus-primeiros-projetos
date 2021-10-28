@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefas de Aula</title>
+</head>
+<body>
+    
+    <script>
+        //Resolução do professor para o Desafio proposto no último dever de casa:
+        var numero;
+        var total = 0;
+        var i=1;
+
+        while(i<=8){
+
+            numero= parseInt(prompt("Digite o " + i + "° número." ));
+            total= total + numero;
+            i++;
+
+        }
+
+        document.write("O total da soma é " + total);
+        document.write("<br> A média é " + (total/i--));
+
+        //faça um script para ler 11 números e armazene no vetor(array):
+
+        var vnum=[];
+        var i=0;
+        var valor;
+
+        while(i<=10){
+            valor = parseInt(prompt("Digite o" + (i+1) + "número"));//pq começa no índice zero, mas na posição 1, por isso que acrescentei o +1 no i.
+            vnum.push(valor);//acrescenta o prompt na array(vetor).
+
+
+            i++
+        }
+
+        //a soma de todos os valores do vetor:
+
+        var j=0;
+        var total=0;
+
+        while(j<vnum.length){
+            total=total + vnum[j];
+            j++;
+        }
+        document.write("A soma de todos os valores é " + total);
+
+        //para somar todos os valores ímpares do vetor:
+
+        var l=0;
+        var totalImpar=0;
+
+        while(l<vnum.length){
+
+            if(vnum[l]%2!==0){
+                totalImpar = totalImpar + vnum[l];
+            }
+            l++;
+        }
+        document.write("A soma de todos os valores ímpares é " + totalImpar + ".");
+
+    </script>
+</body>
+</html>

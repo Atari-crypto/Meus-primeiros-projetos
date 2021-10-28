@@ -1,0 +1,16 @@
+.paragrafo{
+    color: seagreen;
+}
+.destaque{
+    color: blue;
+}
+.enfase{
+    color:  yellow;
+}
+#idTitulo{
+    color: red;
+    text-align: center;
+}
+#idFormulario{
+   background-color: purple;
+}

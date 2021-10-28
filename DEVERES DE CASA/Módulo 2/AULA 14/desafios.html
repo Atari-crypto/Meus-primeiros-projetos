@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafios</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        //1
+        /*O usuário só informará apenas a altura da árvore, SEM considerar o tronco e base então.
+        &nbsp
+        */
+        var altura; // def pelo usuario;
+        var linha = 1;
+        var coluna = 1;
+        altura = parseInt(prompt("Digite a altura das folhas das árvores"));//6
+        var z // usei para o tronco e depois a base;
+        while(linha<=altura){//6?
+
+            while(coluna <= altura){//6
+                if(coluna<=(altura-linha)){
+                    document.write("&nbsp");
+                }else{
+                    if(coluna<=altura){
+                        document.write("*");
+                    }
+                }
+                coluna++;
+            }
+            altura++;
+            document.write("<BR>");
+            coluna=1;
+            linha+=2;
+        }
+        //trabalhando no tronco, que será sempre a mesma coisa (fixo em (altura-1)/2 de espaço + * )
+        z = 1;
+        while(z<=2){
+
+            while(coluna < (linha-1)/2){
+                document.write("&nbsp");
+                coluna++
+            }
+            document.write("*<BR>");
+            z++;
+            coluna= 1;
+        }
+
+        //trabalhando na base. Ela também é definida como 3* ((linha-3)/2)com espaços vazios
+
+        while(coluna < (linha-3)/2){
+            document.write("&nbsp");
+            coluna++
+        }
+        document.write("***");
+
+
+        //Outra forma de fazer a 1°:
+
+        var altura = parseInt(prompt("Digite aqui"));
+        var base = (altura * 2) -1 ;
+
+        var h=1;
+        var b=1;
+
+        var auxME = altura-1;
+        var auxMD = altura-1;
+        var auxIN = 1;
+
+        while(h<=altura){
+            auxIN= h*2 - 1;
+            auxMD= altura - h;
+            auxME=altura - h;
+            
+            while(auxME>1){
+                document.write("M");
+                auxME--;
+            }
+            while(auxIN>=1){
+                document.write("@");
+                auxIN--;
+            }
+            while(auxMD>1){
+                document.write("@");
+                auxMD--;
+            }
+            
+            document.write("<br>");
+            h++;
+        }
+        
+</script>
+</body>
+</html>

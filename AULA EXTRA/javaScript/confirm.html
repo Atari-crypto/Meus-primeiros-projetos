@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm</title>
+</head>
+<body>
+    <script>
+        var mensagem = "Bem vindo. Digite seu nome!";
+        var mPlace = "Seu nome aqui";
+        var novo = prompt(mensagem, mPlace);
+        var res = confirm("Oi " + novo +". Deseja Continuar?");
+        alert(res);
+    
+        document.write(res);
+    
+        //Confirm ele serve para retornar um valor lógico. (V/F) - boolean (true or false);
+    </script>
+    
+</body>
+</html>

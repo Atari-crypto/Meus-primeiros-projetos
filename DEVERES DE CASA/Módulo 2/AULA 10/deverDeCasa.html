@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dever de Casa</title>
+</head>
+<body>
+    
+
+
+
+
+
+    <script>    
+    /*
+        //1º
+        
+        var nome=prompt("Digite seu nome");
+        var notas=[];
+
+        notas[0]= parseInt(prompt("Digite a 1ª nota"));
+        notas[1]= parseInt(prompt("Digite a 2ª nota"));
+        notas[2]= parseInt(prompt("Digite a 3ª nota"));
+        notas[3]= parseInt(prompt("Digite a 4ª nota"));
+        notas[4]= parseInt(prompt("Digite a 5ª nota"));
+        notas[5]= parseInt(prompt("Digite a 6ª nota"));
+        notas[6]= parseInt(prompt("Digite a 7ª nota"));
+        notas[7]= parseInt(prompt("Digite a 8ª nota"));
+        notas[8]= parseInt(prompt("Digite a 9ª nota"));
+        notas[9]= parseInt(prompt("Digite a 10ª nota"));
+
+
+        document.write("A 1ª nota de " + nome + " é : " + notas[0] + "." + "<\p>");
+        document.write("A 2ª nota de " + nome + " é : " + notas[1] + "." + "<\p>");
+        document.write("A 3ª nota de " + nome + " é : " + notas[2] + "." + "<\p>");
+        document.write("A 4ª nota de " + nome + " é : " + notas[3] + "." + "<\p>");
+        document.write("A 5ª nota de " + nome + " é : " + notas[4] + "." + "<\p>");
+        document.write("A 6ª nota de " + nome + " é : " + notas[5] + "." + "<\p>");
+        document.write("A 7ª nota de " + nome + " é : " + notas[6] + "." + "<\p>");
+        document.write("A 8ª nota de " + nome + " é : " + notas[7] + "." + "<\p>");
+        document.write("A 9ª nota de " + nome + " é : " + notas[8] + "." + "<\p>");
+        document.write("A 10ª nota de " + nome + " é : " + notas[9] + "." + "<\p>");
+
+        alert("A média é: " + (notas[0] + notas[1] + notas[2] + notas[3] + notas[4] + notas[5] + notas[6] + notas[7] + notas[8]+ notas[9]) / 10 +".");
+    */    
+
+        
+        //2°
+
+/*
+        var dia=parseInt(prompt("Digite o dia:"));
+
+        var totalDiasMes=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+        var mes=parseInt(prompt("Digite o mês:"));
+
+        
+
+        if(mes==1&&dia>=1&&dia<=31){
+            
+            document.write("Faltam " + ( 365 - dia ) + " dias.");
+        }else if(mes==2&&dia>=1&&dia<=totalDiasMes[1]){//totalDiasMes[mes-1]
+            document.write("Faltam " + ( 365 - dia - 31) + " dias.");//totalDiasMes[0]
+
+        }else if(mes==3&&dia>=1&&dia<=totalDiasMes[2]){
+            document.write("Faltam " + ( 365 - dia - 59 ) + " dias.");
+
+        }else if(mes==4&&dia>=1&&dia<=totalDiasMes[3]){
+            document.write("Faltam " + ( 365 - dia - 90 ) + " dias.");
+
+        }else if(mes==5&&dia>=1&&dia<=totalDiasMes[4]){
+            document.write("Faltam " + ( 365 - dia - 120 ) + " dias.");
+
+        }else if(mes==6&&dia>=1&&dia<=totalDiasMes[5]){
+            document.write("Faltam " + ( 365 - dia - 151 ) + " dias.");
+
+        }else if(mes==7&&dia>=1&&dia<=totalDiasMes[6]){
+            document.write("Faltam " + ( 365 - dia - 182 ) + " dias.");
+
+        }else if(mes==8&&dia>=1&&dia<=totalDiasMes[7]){
+            document.write("Faltam " + ( 365 - dia - 213 ) + " dias.");
+
+        }else if(mes==9&&dia>=1&&dia<=totalDiasMes[8]){
+            document.write("Faltam " + ( 365 - dia - 243 ) + " dias.");
+
+        }else if(mes==10&&dia>=1&&dia<=totalDiasMes[9]){
+            document.write("Faltam " + ( 365 - dia - 274  ) + " dias.");
+
+        }else if(mes==11&&dia>=1&&dia<=totalDiasMes[10]){
+            document.write("Faltam " + ( 365 - dia - 304 ) + " dias.");
+
+        }else if(mes==12&&dia>=1&&dia<=totalDiasMes[11]){
+            document.write("Faltam " + ( 365 - dia - 334 ) + " dias.");
+
+        }else{
+            document.write("Valor Inválido, não existe " + dia + " / " + mes + " /2021.");
+        }*/
+        
+
+        //3°
+
+        var dia=parseInt(prompt("Digite o dia:"));//2
+
+        var totalDiasMes=[31,28,31,30,31,30,31,31,30,31,30,31];
+
+        var soma= 365-dia ;
+
+        var mes=parseInt(prompt("Digite o mês:"));//6
+
+        if(dia>=1&&dia<=totalDiasMes[mes-1]){
+            switch(mes){
+            case 1:
+            document.write("Faltam " + ( soma ) + " dias.");
+            break;
+            case 2:
+            document.write("Faltam " + ( soma - totalDiasMes[0]) + " dias.");
+            break;
+            case 3:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]) ) + " dias.");
+            break;
+            case 4:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]) ) + " dias.");
+            break;
+            case 5:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]) ) + " dias.");
+            break;
+            case 6:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]) ) + " dias.");
+            break;
+            case 7:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]+ totalDiasMes[5]) ) + " dias.");
+            break;
+            case 8:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]+ totalDiasMes[5]+ totalDiasMes[6]) ) + " dias.");
+            break;
+            case 9:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]+ totalDiasMes[5]+ totalDiasMes[6]+ totalDiasMes[7]) ) + " dias.");
+            break;
+            case 10:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]+ totalDiasMes[5]+ totalDiasMes[6]+ totalDiasMes[7]+ totalDiasMes[8])  ) + " dias.");
+            break;
+            case 11:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]+ totalDiasMes[5]+ totalDiasMes[6]+ totalDiasMes[7]+ totalDiasMes[8]+ totalDiasMes[9]) ) + " dias.");
+            break;
+            case 12:
+            document.write("Faltam " + ( soma - (totalDiasMes[0]+ totalDiasMes[1]+ totalDiasMes[2]+ totalDiasMes[3]+ totalDiasMes[4]+ totalDiasMes[5]+ totalDiasMes[6]+ totalDiasMes[7]+ totalDiasMes[8]+ totalDiasMes[9]+ totalDiasMes[10]) ) + " dias.");
+            break;
+            default:
+            document.write("Valor Inválido, não existe " + dia + " / " + mes + " /2021.");
+        }
+        }else{
+            document.write("Valor Inválido, não existe " + dia + " / " + mes + " /2021.");
+        }
+        
+
+    </script>
+</body>
+</html>

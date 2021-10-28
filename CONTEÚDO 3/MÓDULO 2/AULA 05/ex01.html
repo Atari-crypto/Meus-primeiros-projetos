@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo</title>
+</head>
+<body>
+    <script>
+      //parseInt(); ->somente força para sair números inteiros sem vírgulas
+      //parseFloat();  ->força para sair números com vírgula
+
+
+       /*document.write("<p>Olá, Mundo!!<p>");
+
+     
+        var n1 = parseInt (prompt("Digite o primeiro número"));
+        var n2 = parseInt (prompt("Digite o segundo número"));
+        var n3 = parseInt (prompt("Digite o terceiro número"));
+
+        var soma= n1+ n2 + n3;
+
+        document.write("A soma dos três números é: " + soma + ".");
+        */
+
+        /*var letra= prompt("Digite a letra 'a' ....");
+
+        if(letra=="a"){
+            alert("Obrigado, você digitou corretamente!")
+        }else{
+            alert("Que pena, estamos finalizando seu atendimento, grato!")
+        }*/
+        //parseInt+parseFloat=Number.
+        //let=varíavel que está com valor definido somente nesta função!
+
+        
+       /* let nota;
+
+        nota = Number(window.prompt("Digite a nota: "));
+
+        if(nota < 5){
+
+            window.alert("Reprovado");
+
+        }
+
+        if(nota > 9){
+
+            window.alert("Parábens! ");
+
+        }
+
+        if(nota >= 5){
+
+            window.alert("Aprovado");
+
+        }*/
+
+        var nota=Number(prompt("Digite sua nota!"));
+
+        if(nota>=9){
+            alert("Parabéns, vc está aprovado " + "com esta " + nota + ".");
+        }if(nota>=5){
+            alert("Está em recuperação " + "com " + nota + ".");
+        }if(nota<5){
+            alert("Tente novamente, está reprovado " + "com esta " + "." );
+        }
+
+        alert("Fim do script");
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        a{
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        a:hover{
+            opacity: 0.7;
+        }
+        .logo{
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        
+        .nav-list{
+            list-style: none;
+            display: flex;
+        }
+        .nav-list li{
+            letter-spacing: 3px;
+            margin-left: 32px;
+        }
+        .nav-list a:hover{
+            background-color: #141414;
+            color: goldenrod;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        h1{
+            color: #d2b48c;
+            font-size: 40px;
+        }
+
+        header{
+            width: 100%;
+            height: 100%;
+            padding: none;
+            margin: none;
+            display: absolute;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #111111;
+            height: 10vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        
+        body{
+            min-height: 100vh;
+            display: absolute;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(222, 184, 135, 0.8);
+        }
+        /*começa os cards*/
+        .card{
+            width: 200px;
+            color: #1f1b15;
+            height: 230px;
+            display: inline-block;
+            border-radius: 10px;
+            padding: 15px 25px;
+            box-sizing: border-box;
+            cursor: pointer;
+            background-position: center;
+            background-size: cover;
+            transition: transform 0.5s;
+            margin-top: 5vh;
+            margin-left: 12%;
+        }
+        .card1{
+            background-image: url(imgs/s1.png);
+        }
+        .card2{
+            background-image: url(imgs/s2.png);
+        }
+        .card3{
+            background-image: url(imgs/s3.png);
+        }
+        .card4{
+            background-image: url(imgs/s4.png);
+        }
+        .card:hover{
+            transform: translateY(-10px);
+        }
+        .card a:link{
+            text-decoration: none;
+            font-family: sans-serif;
+            color: #473b2c;
+        }
+        .card a:visited{
+            color: #ddcbb0;
+        }
+        .card a:hover{
+            text-decoration: wavy;
+            background-color: #695843;
+        }
+        .card a:active{
+            background-color: #d2b48c;
+        }
+        h5{
+            color: #473b2c;
+            text-shadow: 0 0 5px #6b5840;
+        }
+        /*Começa o slide*/
+        #dvSlider{
+            margin-top: 20vh;
+            margin-left: 37%;
+            width: 500px;
+            height: 250px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 3px solid #111111;
+        }
+
+        #btSlider{
+            background: #d2b48c;
+            height: 15%;
+            color: #fff;
+            cursor: pointer;
+            outline: none;
+            margin: 15px;
+            border: none;
+            font-size: 20px;
+            line-height: 1;
+            width: 5%;
+            border-radius: 30px;
+            transition:all 0.3s linear ;
+        }
+        #btSlider:hover,#btSlider:focus{
+            background: #b5976f;
+        }
+        #btSlider:active{
+            background: #695843;
+        }
+        #dvLoad{
+            width: 100%;
+            height: 5px;
+            margin-top: 50%;
+            border: 1px solid black;
+            background-color: #111111;
+        }
+
+        #dvbarra{
+            width: 0%;
+            height: 100%;
+            background-color: #111111;
+        }
+
+        /*começando o rodapé*/
+        footer{
+            position: relative;
+            width: 100%;
+            margin-top: 14%;
+            height: auto;
+            padding: 10px 10px;
+            background: #111111;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer .container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-left: 100px;
+        }
+        footer .container .sec.aboutus{
+            margin-right: 30px;
+        }
+        footer .container .sec.aboutus{
+            width: 40%;
+        }
+        footer .container h2{
+            position: relative;
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        footer .container  h2:before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #d2b48c;
+        }
+        footer p{
+            color: #999;
+        }
+        .sci{
+            margin-top: 20px;
+            display: flex;
+        }
+        .sci li{
+            list-style: none;
+        }
+        .sci li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .sci li a:hover{
+            background: #d2b48c;
+        }
+        .sci li a .fa{
+            color: #fff;
+            font-size: 20px;
+        }
+        .quickLinks{
+            position: relative;
+            width: 25%;
+        }
+        .quickLinks ul li{
+            list-style: none;
+        }
+        .quickLinks ul li a {
+            color: #999;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .quickLinks ul li a:hover{
+            color: #fff;
+        }
+        .contact{
+            width: calc(35% - 60px);
+            margin-right: 0 !important;
+        }
+        .contact .info{
+            position: relative;
+        }
+        .contact .info li{
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .contact .info li span:nth-child(1){
+            color: #fff;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .contact .info li span{
+            color: #999;
+        }
+        .contact .info li a {
+            color: #999;
+            text-decoration: none;
+        }
+        .contact .info li a:hover{
+            color: #fff;
+        }
+        .copyrightText{
+            width: 100%;
+            background: #222;
+            padding: 8px 140px ;
+            text-align: center;
+            color: #999;
+        }
+        .copyrightText span{
+            color: rgba(97, 97, 97, 0.767);
+        }
+        /*começa o scroolbar*/
+        ::-webkit-scrollbar{
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #111111;
+            border-radius: 50px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: #d2b48c;
+            border-radius: 50px;
+        }
+    </style>
+    <script>
+        var imgs=[];
+        var slider;
+        var imgAtual;
+        var maxImg;
+        var intervalo;
+        var tempoInt;
+        var vTempo;
+        var vBarra;
+
+        function precarregamento(){
+            var s=1;
+            for(var i=0; i<4;i++){
+                imgs[i]=new Image();
+                imgs[i].src="imgs/s"+s+".png";
+                s++;
+            }
+        }
+        function carregarImg(img){
+            slider.style.backgroundImage="url('"+imgs[img].src+"')";
+        }
+        function inicia() {
+            //faz o pré carregamento da imagem.
+            precarregamento();
+            //parametro para carregar as imagens
+            imgAtual=0;
+            //inicializar um numero maximo de imagens
+            maxImg=imgs.length-1;
+            //associo o elemto que vai receber as imagens 
+            slider=document.getElementById("dvSlider");
+            vBarra=document.getElementById("dvLoad");
+            //faço o primeiro carregamento da imagem
+            carregarImg(imgAtual);
+            //defino o contador do tempo de troca da imagem
+            tempoInt=0;
+            //crio o intervalo de troca da imagem, chamando a funçao troca.
+            //intervalo=setInterval(troca,tempoInt);
+            //chamo a funçao anima
+            anima();
+        }
+        function troca(dir){
+            tempoInt=0;
+            imgAtual+=dir;
+            if(imgAtual>maxImg){
+                imgAtual=0;
+            }else{
+                if(imgAtual<0){
+                    imgAtual=maxImg;
+                }
+            }
+            carregarImg(imgAtual);
+        }
+
+        function anima(){
+            tempoInt++;
+            if(tempoInt>=500){
+                tempoInt=0;
+                troca(1);
+            }
+
+            vTempo=tempoInt/5;
+            //como meu tempo e de 500 eu divido por 5.
+            vBarra.style.width=vTempo+"%";
+            window.requestAnimationFrame(anima);
+        }
+        //add um evento de carregamento (puxa a função inicia).
+        window.addEventListener("load",inicia);
+    </script>
+    <title>Encomende sua peça</title>
+</head>
+
+<body>
+    <header>
+    <nav>
+        <a href="/CONTEÚDO 3/MÓDULO 2/AULA 23/ex00.html" class="logo"><h1>Hefesto</h1></a>
+        
+        <ul class="nav-list">
+            <li><a href="ex01.html">Fale Conosco</a></li>
+            <li><a href="ex02.html">Agende seu serviço</a></li>
+            <li><a href="ex04.html">Quiz</a></li>
+        </ul>
+    </nav>
+    </header>
+    <div id="dvSlider" >
+        <button id="btSlider" onclick="troca(-1)"><</button>
+        <div id="dvLoad">
+            <div id="dvBarra"></div>
+        </div>
+        <button id="btSlider"  onclick="troca(1)">></button>
+    </div>
+    <div class="col">
+        <div class="card card1">
+            <h5>Velas</h5>
+            <p>Para comprar este produto <a target="_blank" href="https://produto.mercadolivre.com.br/MLB-1533615978-vela-ignico-gm-cobalt-14-2011-2012-2013-2014-2015-_JM?matt_tool=10914284&matt_word=&matt_source=google&matt_campaign_id=12270420168&matt_ad_group_id=116657149359&matt_match_type=&matt_network=g&matt_device=c&matt_creative=496755648945&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=109763227&matt_product_id=MLB1533615978&matt_product_partition_id=327061798772&matt_target_id=pla-327061798772&gclid=CjwKCAjwx8iIBhBwEiwA2quaq_JOsZmIOlmbCXwafU7ydeiD43MVoYPP5lLUv2D9W9bp3e9g4n-DURoCCVcQAvD_BwE">clique aqui</a></p>
+        </div>
+        <div class="card card2">
+            <h5>Retrovisor</h5>
+            <p>Para comprar este produto <a target="_blank" href="https://produto.mercadolivre.com.br/MLB-771782181-par-retrovisor-gol-parati-saveiro-g3-g4-com-controle-interno-para-carros-de-04-portas-_JM#position=27&search_layout=grid&type=item&tracking_id=e4156454-eded-423d-92d4-21237f52ccf8">clique aqui</a></p>
+        </div>
+        <div class="card card3">
+            <h5>Pneu</h5>
+            <p>Para comprar este produto <a target="_blank" href="https://www.mercadolivre.com.br/pneu-pirelli-formula-evo-19555-r15-85-h/p/MLB16145958?pdp_filters=category:MLB2238#searchVariation=MLB16145958&position=2&search_layout=grid&type=product&tracking_id=ec675d99-b25a-4331-8f1c-c8467a1db48c">clique aqui</a></p>
+        </div>
+        <div class="card card4">
+            <h5>Bico Injetor</h5>
+            <p>Para comprar este produto <a target="_blank" href="https://produto.mercadolivre.com.br/MLB-1351728175-bico-injetor-palio-siena-uno-10-fire-10-8v-iwp065-_JM?matt_tool=10914284&matt_word=&matt_source=google&matt_campaign_id=12270420168&matt_ad_group_id=116657149359&matt_match_type=&matt_network=g&matt_device=c&matt_creative=496755648945&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=122606089&matt_product_id=MLB1351728175&matt_product_partition_id=327061798772&matt_target_id=pla-327061798772&gclid=CjwKCAjwx8iIBhBwEiwA2quaq7UcAisckOLmc61M7SYTRkA261dOsyVzHeQL1yftEAGb7f9Hg8D1lxoCpt0QAvD_BwE">clique aqui</a></p>
+        </div>
+    </div>
+</body>
+<footer>
+    <div class="container">
+        <div class="sec aboutus">
+            <h2>Hefesto</h2>
+            <p>Este é o novo conceito de oficina, que encrementa o conceito do rústico com o comteporâneo.</p>
+        <ul class="sci">
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+        </div>
+        <div class="sec quickLinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Termos & Condições</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contate-nos</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span>646 Rua Diego Muñoz<br>
+                        Hermosa, SP 23560,<br>USA
+                    </span>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <p><a href="tel:123456789">+1 123 456 789</a>
+                    <br><a href="tel:321654987">+1 321 654 987</a></p>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <p><a href="mailto:qwertyu@rod.com">qwertyu@rod.com</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="copyrightText">
+            <p>copyright &copy; 2020 Estolano Enterprises. designed by <span>atari-crypto</span></p>
+        </div>
+    </div>
+</footer>
+</html>

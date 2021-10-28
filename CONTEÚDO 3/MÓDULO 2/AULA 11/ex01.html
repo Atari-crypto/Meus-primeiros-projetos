@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos 01</title>
+</head>
+<body>
+    <script>
+        document.write("<p>1.<p>");
+        document.write("<p>2.<p>");
+        document.write("<p>3.<p>");
+        document.write("<p>4.<p>");
+        document.write("<p>5.<p>");
+        document.write("<p>6.<p>");   
+            
+        var n = 1;
+
+        while(n<=100){
+            document.write("<p>" + n + "." + "<p>");
+                //n =n+1;
+                //n+=1;
+                n++;
+        }    
+
+        document.write("Fim.");
+
+        document.write("<p>1.<p>");
+        document.write("<p>2.<p>");
+        document.write("<p>3.<p>");
+        document.write("<p>4.<p>");
+        document.write("<p>5.<p>");
+        document.write("<p>6.<p>");   
+            
+        var n = 1;
+
+        while(n<100){//a diferença que ñ é <=, mas sim <.
+            document.write("<p>" + n + "." + "<p>");
+                //n =n+1;
+                //n+=1;
+                n++;
+        }    
+
+        document.write("Fim.");
+
+        var i=0; // declaração de variável com atribuição de valor(0).
+
+
+        while(i<=20){ // início do comando while(), enquanto i for menor ou igual a 20.
+            window.alert(i); // imprimindo no console o valor de i, naquele momento.
+            i=i+2; // somando 2 a variável i, alterando o seu valor a cada loop.
+        }
+
+        document.write("Estes são os números pares até 20.");
+
+        var i=0;
+
+        while(i<=100){
+            if(i%2==0){//o modulo do resto 
+                document.write( i + "<br>");
+                i++;//i=i+1
+            }
+            
+            
+        }
+
+        window.alert("Estes são os números pares até 100.");
+        
+        var i=0;
+
+        while(i<=100){
+            if(i%2!==0){//o modulo do resto 
+                document.write( i + "<br>");
+                i++;//i=i+1
+            }
+            
+            
+        }
+        
+        window.alert("Estes são os números ímpares até 100.");
+        
+        var i=1; // declaração de variável com atribuição de valor(0).
+
+
+        while(i<=20){// início do comando while(), enquanto i for menor ou igual a 20.
+            window.alert(i); // imprimindo no console o valor de i, naquele momento.
+            i=i+2; // somando 2 a variável i, alterando o seu valor a cada loop.
+        }
+
+        document.write("Estes são os números pares até 20.");
+
+        var i=0;
+
+        while(i<=100){
+            if(i%7==0){//o modulo do resto 
+                document.write( i + "<br>");
+                i++;//i=i+1
+            }
+        }
+        
+        window.alert("Estes são os múltiplos de 7 até 100.");
+
+        var i=parseInt(prompt("Digite um número"));
+
+        while(i<=40){
+            if(i%2!==0){//o modulo do resto 
+                document.write( i + " é ímpar." + "<br>");
+                i++;//i=i+1
+            }
+            if(i%2==0){//o modulo do resto 
+                document.write( i + " é par." + "<br>");
+                i++;//i=i+1
+            }
+               
+            
+        }
+        document.write("Fim do Script.");
+        
+        var i = 50;
+
+        while(i>=15){
+
+            document.write(i + "<BR>");
+
+            i--;
+
+        }
+
+        var n= parseInt(prompt("Digite um número"));
+
+        while(n<=100){
+            if(n%n==0 && n%1==0){
+                document.write("Este " + n +  " é número primo.");
+            }if(n%n!==0 && n%1!==0){
+                document.write("Este " + n +  " não é número primo.")
+            }
+        }
+            document.write("Fim do Script.");
+
+            var num= parseInt(prompt("Digite um número"));
+            cont= 0;
+
+            while(num <= 200){
+                if(num%5==0){
+                    document.write( num + "." + "<br>");
+                    num+=5;
+                    cont++;
+                }else{
+                    num++;
+                }
+
+            }
+            document.write("São " + cont + " números divissíveis por 5.");
+
+            var vetor = ['papel', 'lápis', 'caneta', 'liquidpaper','cola', 'tesoura', 'estojo','mochila','lancheira'];
+            var indice = 0;
+            while(indice < vetor.length) {
+            document.write("<br>" + vetor[indice] + ".<br>");
+            indice++;
+            // ou somente document.write("<br>" + vetor[indice++]);
+            }
+            document.write("<br>Fim do script.");
+
+            var listaNomes=[];
+            var nome;
+            var i=0;
+
+            while(i<=7){
+                nome=prompt("Digite um nome.");
+                listaNomes.push(nome);  //listaNomes[i] = nome;
+                i++;
+            }
+            document.write("Você armazenou " + listaNomes.length + " valores." + "<br>" );
+
+            document.write("Fim.");
+
+    </script>
+</body>
+</html>

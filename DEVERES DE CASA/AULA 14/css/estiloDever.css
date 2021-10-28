@@ -1,0 +1,17 @@
+html{
+    font-size: 62.5%;
+}
+h1{
+    font-size: 300%;
+}
+.caixa{
+    font-size: 200%;
+    border: 2px black dashed;
+    border-radius: 10%;
+    width: 75%;
+    background-color: gray;
+    box-sizing: border-box;
+}
+p{
+    font-size: 100%;
+}

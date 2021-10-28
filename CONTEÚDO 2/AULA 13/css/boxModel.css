@@ -1,0 +1,35 @@
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    font-size: 32px;
+    margin: 0px;
+}
+
+.frase1,
+.frase2,
+.referencia{
+    width: 500px;
+    text-align: justify;
+    background-color: yellow;
+}
+
+.referencia{
+    background-color: blue;
+    height: 20px;
+}
+
+.frase1 {
+    padding: 20px;
+    border: 5px solid red;
+    /*box-sizing: content-box;*/
+    }
+    
+.frase2 {
+
+    padding: 20px;
+    border: 5px solid red;
+    /*box-sizing: border-box;*/
+    }

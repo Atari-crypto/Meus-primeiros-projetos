@@ -1,0 +1,26 @@
+h1{
+    color:thistle;
+}
+body{
+    background-color:blue;
+}
+table{
+    color: yellow;
+}
+.vermelho{
+    color: tomato;
+}
+#idfooter{
+    background-color: wheat;
+}
+p{
+    background-color: wheat;
+}
+#idDestaque{
+    background-color: turquoise;
+}
+.verdeescuro{
+    background-color: darkolivegreen;
+    color: darkorange;
+}
+

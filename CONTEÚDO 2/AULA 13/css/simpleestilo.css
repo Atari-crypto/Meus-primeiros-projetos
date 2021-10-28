@@ -1,0 +1,129 @@
+h3{
+
+    text-align: center;
+
+}
+
+
+
+h2{
+
+    text-align: center;
+
+}
+
+
+
+div{
+
+    width: 360px;
+
+    height: 200px;
+
+    background-image: url(freepik24072020.png);
+
+    border: 2px solid red;
+
+    margin: 50px;
+
+}
+
+
+
+.blur:hover{
+
+    filter: blur(5px);
+
+    transition: 5s;
+
+}
+
+
+
+.brightness:hover{
+
+    filter: brightness(0.7);
+
+}
+
+
+
+.contrast:hover{
+
+    filter: contrast(1.5);
+
+}
+
+
+
+.shadow:hover{
+
+    filter:drop-shadow(1);
+
+    box-shadow: 15px 5px 50px #222;
+
+}
+
+
+
+.grayscale:hover{
+
+    filter: grayscale(1);
+
+    transition: 2s;
+
+}
+
+
+
+.matrixrotation:hover{
+
+    
+
+    transform: rotate(45deg)
+
+}
+
+
+
+.matrix:hover{
+
+    transform: matrix(1,1,0,1,0,0);
+
+}
+
+
+
+.scale:hover{
+
+    transform: scale(2.0);
+
+}
+
+
+
+.rotate:hover{
+
+    transform: rotate(800grad);
+
+    transition: 4s linear;
+
+}
+
+
+
+.skew:hover{
+
+    transform: skew(10deg, 10deg);
+
+    transition-delay: 1s;
+
+}
+
+
+
+.opacity:hover{
+
+    filter: opacity(0.4);
+
+}

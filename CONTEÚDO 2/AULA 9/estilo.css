@@ -1,0 +1,15 @@
+
+
+#iddiv2{
+    color: sienna;
+}
+body > .importante{
+    color: springgreen;
+    font-family: cursive;
+    text-decoration: underline;
+    text-align: center;
+}
+.segmento{
+    color: steelblue;
+    
+}

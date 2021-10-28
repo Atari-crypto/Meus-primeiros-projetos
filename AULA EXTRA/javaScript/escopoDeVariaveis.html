@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Escopo de Variáveis</title>
+</head>
+<body>
+    
+
+
+
+    <script>//não é recomendável criar duas vars com mesmos nomes!
+
+        var nomeCor="Vermelho";//ela imprimirá a ação fora da função abaixo pq document e a function estão em escopos diferentes
+
+        var i=0 // var da for criada sem necessidade de repeti-lá abaixo
+
+        //Aqui ele criou uma função para:
+
+        function cor(){
+
+        var nomeCor="Azul";  //inseriu a string azul na var nomeCor,o escopo dela ñ é global,restrita a esta function
+
+        /*nomeCor="Azul";*/  // se eu retirar o var ele se torna global, pq a var é a mesma, ou seja,global,viram a msm var
+
+        /*document.write(nomeCor + "<br>" + ".");*/ //imprimirá a var que agr é uma string,uma quebra de txt e um ponto final
+
+        document.write(thisnomeCor + "<br>" + nomeCor + ".") //this puxa a var global para dentro da função
+        }
+
+        cor();           //Agora executarei ela no
+
+        for(i=0; i<10; i++){} // var i declarada acima, sem necessidade de criar outra 
+
+        document.write( i + "<br>"); //imprimiu a var i ,mais uma quebra de linha
+ 
+        //document.write(nomeCor + "<br>" + "."); // não imprimirá pq sua área de ação ou escopo está restrito a funçao acima
+
+    </script>
+</body>
+</html>

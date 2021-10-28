@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulação de elementos Html getElemntById</title>
+    
+</head>
+<body>
+    <p id="texto">
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident blanditiis voluptatibus iusto aliquam asperiores laborum perspiciatis voluptas corporis. Natus quas at et itaque amet, id necessitatibus voluptatum libero reprehenderit unde.
+    </p>
+    <div id="caixa">
+        4545
+    </div>
+    <script>
+        var txt=document.getElementById("texto"); 
+        txt.style.color="red"
+        txt.style.fontSize="50px";
+        txt.style.display="block"
+        var cx= document.getElementById("caixa")
+        cx.style.border="1px solid black"
+        cx.style.width="300px"
+        cx.style.height="300px"
+        cx.style.backgroundColor="gray"
+    </script>
+</body>
+</html>

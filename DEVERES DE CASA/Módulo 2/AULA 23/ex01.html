@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url(https://fonts.googleapis.com/css2?family=Nova+Cut&display=swap);
+        @import url(https://fonts.googleapis.com/css2?família=Nova+Square&display=swap);
+        @import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.css);
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header a{
+            color: #fff;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        header a:hover{
+            opacity: 0.7;
+        }
+        .logo{
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+        
+        .nav-list{
+            list-style: none;
+            display: flex;
+        }
+        .nav-list li{
+            letter-spacing: 3px;
+            margin-left: 32px;
+        }
+        .nav-list a:hover{
+            background-color: #141414;
+            color: goldenrod;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        h1{
+            color: #d2b48c;
+            font-size: 40px;
+        }
+
+        header{
+            width: 100%;
+            height: 100%;
+            padding: none;
+            margin: none;
+            display: absolute;
+        }
+
+        nav{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: #111111;
+            height: 10vh;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
+        }
+        
+        body{
+            min-height: 100vh;
+            display: absolute;
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: column;
+            background: rgba(222, 184, 135, 0.8);
+            outline: none;
+        }
+        .box{
+            position: absolute;
+            top: 70%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 20px;
+            width: 50%;
+            color: aliceblue;
+            font-family: 'Nova Square',cursive;
+        }
+        fieldset{
+            border: 3px solid #d5b790 ;
+        }
+        legend{
+            border: 1px solid #d5b790;
+            padding: 12px;
+            text-align: center;
+            background-color: #f8d19f;
+            border-radius: 10px;
+            color: #363535;
+        }
+        .inputBox{
+            position: relative;
+            margin-left: 5px ;
+            margin-right: 5px;
+        }
+        .inputUser{
+            background: none;
+            border: none;
+            border-bottom: 2px solid #fffafa;
+            outline: none;
+            color: #fffafa;
+            font-size: 15px;
+            width: 100%;
+            letter-spacing: 2px;
+        }
+        .btn{
+            letter-spacing: 90px;
+            margin-left: 40px;
+            border-bottom: none;
+        }
+        .labelInput{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none ;
+            transition: .5s;
+            font-size: 16px;
+        }
+        .inputUser:focus ~ .labelInput, .inputUser:valid ~ .labelInput{
+            top: -20px;
+            font-size: 12px;
+            color: #cf974f;
+        }
+        .iidade{
+            margin-left: 2%;
+            border: none;
+            padding: 8px;
+            border-radius: 10px;
+            outline: none;
+            font-size: 15px;
+        }
+        #submit{
+            background-image: linear-gradient( to right, #e9b97c, #214778);
+            width: 90%;
+            border: none;
+            padding: 15px;
+            color: #fffafa;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 35px;
+            font-family: 'Nova Square', cursive;
+        }
+            
+        #reset{
+            background-image: linear-gradient( to right, #e9b97c, #e32636);
+            width: 90%;
+            border: none;
+            padding: 15px;
+            color: #fffafa;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-left: 35px;
+            font-family: 'Nova Square', cursive;
+        }
+
+        #submit:hover{
+            box-shadow: 0 0.4rem 1.4rem 0 #214778;
+            background-image: linear-gradient(to left burlywood, #214778);
+        }
+
+        #reset:hover{
+            box-shadow: 0 0.4rem 1.4rem 0 #e32636;
+            background-image:linear-gradient(to left burlywood, #e32636) ;
+        }
+        
+        #feminino,#masculino,#outros{
+            margin-left: 5px ;
+            margin-right: 5px;
+        }
+        /*começando o rodapé*/
+        footer{
+            position: relative;
+            width: 100%;
+            margin-top: 62%;
+            height: auto;
+            padding: 10px 110px;
+            background: #111111;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        footer .container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            flex-direction: row;
+            margin-left: 100px;
+        }
+        footer .container .sec.aboutus{
+            margin-right: 30px;
+        }
+        footer .container .sec.aboutus{
+            width: 40%;
+        }
+        footer .container h2{
+            position: relative;
+            color: #fffafa;
+            font-weight: 500;
+            margin-bottom: 15px;
+        }
+        footer .container  h2:before{
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: #d2b48c;
+        }
+        footer p{
+            color: #999;
+        }
+        .sci{
+            margin-top: 20px;
+            display: flex;
+        }
+        .sci li{
+            list-style: none;
+        }
+        .sci li a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 10px;
+            text-decoration: none;
+            border-radius: 4px;
+        }
+        .sci li a:hover{
+            background: #d2b48c;
+        }
+        .sci li a .fa{
+            color: #fffafa;
+            font-size: 20px;
+        }
+        .quickLinks{
+            position: relative;
+            width: 25%;
+        }
+        .quickLinks ul li{
+            list-style: none;
+        }
+        .quickLinks ul li a {
+            color: #999;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+        .quickLinks ul li a:hover{
+            color: #fffafa;
+        }
+        .contact{
+            width: calc(35% - 60px);
+            margin-right: 0 !important;
+        }
+        .contact .info{
+            position: relative;
+        }
+        .contact .info li{
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .contact .info li span:nth-child(1){
+            color: #fffafa;
+            font-size: 20px;
+            margin-right: 10px;
+        }
+        .contact .info li span{
+            color: #999;
+        }
+        .contact .info li a {
+            color: #999;
+            text-decoration: none;
+        }
+        .contact .info li a:hover{
+            color: #fffafa;
+        }
+        .copyrightText{
+            width: 100%;
+            background: #222;
+            padding: 2px 140px ;
+            text-align: center;
+            color: #999;
+            height: auto;
+        }
+        .copyrightText span{
+            color: rgba(97, 97, 97, 0.767);
+        }
+        /*começa o scroolbar*/
+        ::-webkit-scrollbar{
+            width: 9px;
+        }
+        ::-webkit-scrollbar-track{
+            background: #111111;
+            border-radius: 50px;
+        }
+        ::-webkit-scrollbar-thumb{
+            background: #d2b48c;
+            border-radius: 50px;
+        }
+    </style>
+    
+    <title>Fale Conosco</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/CONTEÚDO 3/MÓDULO 2/AULA 23/ex00.html" class="logo"><h1>Hefesto</h1></a>
+            
+            <ul class="nav-list">
+                <li><a href="ex02.html">Agende seu serviço</a></li>
+                <li><a href="ex03.html">Encomende sua peça</a></li>
+                <li><a href="ex04.html">Quiz</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="box"> 
+        <form action="">
+            <fieldset>
+                <legend><b>Fale Conosco</b></legend>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" id="inome" class="inputUser" required onblur="verificarNome()"/>
+                    <label for="inome" class="labelInput">Nome completo:</label>
+                </div>
+                <br><br>
+                <p id="feminino">Sexo:</p>
+                <br>
+                    <input type="radio"  id="feminino" name="genero" required value="feminino" >
+                    <label for="feminino" >Feminino</label>
+                    <br><br>
+                    <input type="radio"  id="masculino" name="genero" required value="masculino" >
+                    <label for="masculino" >Masculino</label>
+                    <br><br>
+                    <input type="radio"  id="outros" name="genero" required value="outros" >
+                    <label for="outros" >Outros</label>
+                <br><br>
+                <div class="inputBox">
+                    <label for="iidade" class="dataDeNascimento"><b>Data de Nascimento:</b></label>
+                    <input type="date" id="iidade" class="iidade" required  />
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" id="icpf" class="inputUser"  required onblur="verificarCPF()"/>
+                    <label for="icpf" class="labelInput">CPF:</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" id="itelefone" class="inputUser" required  onblur="verificarTelefone()"/>
+                    <label for="itelefone" class="labelInput">Telefone:</label>
+                </div>
+                <br><br>    
+                <div class="inputBox"> 
+                    <input type="text" id="iemail" class="inputUser" required  onblur="verificarEmail()"/>
+                    <label for="iemail" class="labelInput">Email:</label>
+                </div>
+                <br><br>    
+                <div class="inputBox"> 
+                    <input list="suaCidade" id="icidade" class="inputUser" required  />
+                    <label for="icidade" class="labelInput">Cidade:</label>
+                    <datalist id="suaCidade">
+                        <option value="Rio de Janeiro">
+                        <option value="São Paulo">
+                        <option value="Belo Horizonte">
+                        <option value="Curitiba">
+                        <option value="Florianópolis">
+                        <option value="Porto Alegre">
+                    </datalist>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" id="isugestao"  class="inputUser" required onblur="verificarSugestao()"/>
+                    <label for="isugestao" class="labelInput">Sua sugestão ou crítica:</label> 
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <label for="iopiniao"><span class="inputUser btn">0</span><span class="inputUser btn">1</span><span class="inputUser btn">2</span><span class="inputUser btn">3</span><span class="inputUser btn">4</span><span class="inputUser btn">5</span></label>
+                    <input type="range" id="iopiniao" min="0" max="5" class="inputUser" required />
+                    <label for="iopiniao" class="labelInput">Sua opinião do nosso suporte (entre 0 a 5):</label> 
+                </div>
+                <BR></BR>
+                <input type="submit" id="submit" value="Enviar">
+                <br><br>
+                <input type="reset" id="reset" value="Limpar">
+                <br><br>
+            </fieldset>
+        </form>
+</div>
+</body>
+<footer>
+    <div class="container">
+        <div class="sec aboutus">
+            <h2>Hefesto</h2>
+            <p>Este é o novo conceito de oficina, que encrementa o conceito do rústico com o comteporâneo.</p>
+        <ul class="sci">
+            <li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        </ul>
+        </div>
+        <div class="sec quickLinks">
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Política de Privacidade</a></li>
+                <li><a href="#">Ajuda</a></li>
+                <li><a href="#">Termos & Condições</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+        <div class="sec contact">
+            <h2>Contate-nos</h2>
+            <ul class="info">
+                <li>
+                    <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                    <span>646 Rua Diego Muñoz<br>
+                        Hermosa, SP 23560,<br>USA
+                    </span>
+                </li>
+                <li>
+                    <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                    <p><a href="tel:123456789">+1 123 456 789</a>
+                    <br><a href="tel:321654987">+1 321 654 987</a></p>
+                </li>
+                <li>
+                    <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                    <p><a href="mailto:qwertyu@rod.com">qwertyu@rod.com</a></p>
+                </li>
+            </ul>
+        </div>
+        <div class="copyrightText">
+            <p>copyright &copy; 2020 Estolano Enterprises. designed by <span>atari-crypto</span></p>
+        </div>
+    </div>
+</footer>
+<script>
+    
+    
+    function verificarNome(){
+        //retira os espaços vazios
+        let nome =  document.getElementById("inome").value;
+        nome = nome.trim();
+
+        //retirando os espaços duplos no meio do nome
+        while(nome.includes("  ")){
+            nome =  nome.replace("  "," ")
+        }
+
+        //verificar se ele é um nome com sobrenome
+        if( !nome.includes(" ") || nome.length < 7){
+            alert("Você não digitou o nome completamente, favor escreva seu nome e sobrenome novamente.");
+        }
+
+        //retirando os números do nome
+        while( nome.includes("0") || nome.includes("1")|| nome.includes("2")|| nome.includes("3")|| nome.includes("4")
+        || nome.includes("5") || nome.includes("6") || nome.includes("7") || nome.includes("8")  || nome.includes("9")){//para excluir mais números caso seja digitado
+            alert("Está área não permite número! Excluiremos este.");
+            nome = nome.replace("0","");
+            nome = nome.replace("1","");
+            nome = nome.replace("2","");
+            nome = nome.replace("3","");
+            nome = nome.replace("4","");
+            nome = nome.replace("5","");
+            nome = nome.replace("6","");
+            nome = nome.replace("7","");
+            nome = nome.replace("8","");
+            nome = nome.replace("9","");
+            
+        }
+        document.getElementById("inome").value = nome;
+    }
+
+    function verificarCPF(){
+        let cpf = document.getElementById("icpf").value;
+
+        cpf = cpf.trim();
+
+        
+        while(cpf.includes("  ")){
+            cpf =  cpf.replace("  "," ");
+        }
+        
+        if (cpf.length == 11) {
+            cpf = cpf.substring(0,3) + '.' + cpf.substring(3,6) + '.' + cpf.substring(6,9) + '-' + cpf.substring(9,11);
+        }
+
+
+
+        //retirando os números do nome
+        while( cpf.includes("a") || cpf.includes("b")|| cpf.includes("c")|| cpf.includes("d")|| cpf.includes("e")
+        || cpf.includes("f") || cpf.includes("g") || cpf.includes("h") || cpf.includes("i")  || cpf.includes("j")|| cpf.includes("k")|| cpf.includes("l")
+        || cpf.includes("m")|| cpf.includes("n")|| cpf.includes("o")|| cpf.includes("p")|| cpf.includes("q")|| cpf.includes("r")
+        || cpf.includes("s")|| cpf.includes("t")|| cpf.includes("u")|| cpf.includes("v")|| cpf.includes("w")|| cpf.includes("x")
+        || cpf.includes("y")|| cpf.includes("z") || cpf.includes("A") || cpf.includes("B")|| cpf.includes("C")|| cpf.includes("D")|| cpf.includes("E")
+        || cpf.includes("F") || cpf.includes("G") || cpf.includes("H") || cpf.includes("I")  || cpf.includes("J")|| cpf.includes("K")|| cpf.includes("L")
+        || cpf.includes("M")|| cpf.includes("N")|| cpf.includes("O")|| cpf.includes("P")|| cpf.includes("Q")|| cpf.includes("R")
+        || cpf.includes("S")|| cpf.includes("T")|| cpf.includes("U")|| cpf.includes("V")|| cpf.includes("W")|| cpf.includes("X")
+        || cpf.includes("Y")|| cpf.includes("Z") || cpf.includes("@")|| cpf.includes("&")|| cpf.includes("+")|| cpf.includes("#")|| cpf.includes("<") || cpf.includes(">")){//para excluir mais letras caso seja digitado
+            alert("Está área não permite letra! Excluiremos este.");
+            cpf = cpf.replace("a","");
+            cpf = cpf.replace("b","");
+            cpf = cpf.replace("c","");
+            cpf = cpf.replace("d","");
+            cpf = cpf.replace("e","");
+            cpf = cpf.replace("f","");
+            cpf = cpf.replace("g","");
+            cpf = cpf.replace("h","");
+            cpf = cpf.replace("i","");
+            cpf = cpf.replace("j","");
+            cpf = cpf.replace("k","");
+            cpf = cpf.replace("l","");
+            cpf = cpf.replace("m","");
+            cpf = cpf.replace("n","");
+            cpf = cpf.replace("o","");
+            cpf = cpf.replace("p","");
+            cpf = cpf.replace("q","");
+            cpf = cpf.replace("r","");
+            cpf = cpf.replace("s","");
+            cpf = cpf.replace("t","");
+            cpf = cpf.replace("u","");
+            cpf = cpf.replace("v","");
+            cpf = cpf.replace("w","");
+            cpf = cpf.replace("x","");
+            cpf = cpf.replace("y","");
+            cpf = cpf.replace("z","");
+            cpf = cpf.replace("A","");
+            cpf = cpf.replace("B","");
+            cpf = cpf.replace("C","");
+            cpf = cpf.replace("D","");
+            cpf = cpf.replace("E","");
+            cpf = cpf.replace("F","");
+            cpf = cpf.replace("G","");
+            cpf = cpf.replace("H","");
+            cpf = cpf.replace("I","");
+            cpf = cpf.replace("J","");
+            cpf = cpf.replace("K","");
+            cpf = cpf.replace("L","");
+            cpf = cpf.replace("M","");
+            cpf = cpf.replace("N","");
+            cpf = cpf.replace("O","");
+            cpf = cpf.replace("P","");
+            cpf = cpf.replace("Q","");
+            cpf = cpf.replace("R","");
+            cpf = cpf.replace("S","");
+            cpf = cpf.replace("T","");
+            cpf = cpf.replace("U","");
+            cpf = cpf.replace("V","");
+            cpf = cpf.replace("W","");
+            cpf = cpf.replace("X","");
+            cpf = cpf.replace("Y","");
+            cpf = cpf.replace("Z","");
+            cpf = cpf.replace("@","");
+            cpf = cpf.replace("&","");
+            cpf = cpf.replace("+","");
+            cpf = cpf.replace("#","");
+            cpf = cpf.replace("<","");
+            cpf = cpf.replace(">","");
+        }
+
+        /*if(cpf.length == 3){
+            cpf.substring(2,3) + ".";
+        }else if(cpf.length == 7){
+            cpf.substring(7,8) + ".";
+        }else if(cpf.length == 11){
+            cpf.substring(8,9) + "-";
+        }*/
+    
+
+        
+        
+
+        document.getElementById("icpf").value = cpf;
+    }
+
+    function verificarTelefone(){
+        let telefone = document.getElementById("itelefone").value;
+
+        telefone = telefone.trim();
+
+        while(telefone.includes("  ")){
+            telefone =  telefone.replace("  "," ");
+        }
+        while(telefone.includes(" ")){
+            telefone =  telefone.replace(" ","");
+        }
+
+        if (telefone.length > 9 ) {
+            telefone= "(" + telefone.substring(0,2) + ")" + telefone.substring(2,7) + "-" + telefone.substring(7,11) ;
+            document.getElementById("itelefone").value=telefone;
+        } 
+        
+        //(21)97004-6921
+        //retirando os espaços duplos no meio do nome
+        
+        while( telefone.includes("a") || telefone.includes("b")|| telefone.includes("c")|| telefone.includes("d")|| telefone.includes("e")
+        || telefone.includes("f") || telefone.includes("g") || telefone.includes("h") || telefone.includes("i")  || telefone.includes("j")|| telefone.includes("k")|| telefone.includes("l")
+        || telefone.includes("m")|| telefone.includes("n")|| telefone.includes("o")|| telefone.includes("p")|| telefone.includes("q")|| telefone.includes("r")
+        || telefone.includes("s")|| telefone.includes("t")|| telefone.includes("u")|| telefone.includes("v")|| telefone.includes("w")|| telefone.includes("x")
+        || telefone.includes("y")|| telefone.includes("z") || telefone.includes("A") || telefone.includes("B")|| telefone.includes("C")|| telefone.includes("D")|| telefone.includes("E")
+        || telefone.includes("F") || telefone.includes("G") || telefone.includes("H") || telefone.includes("I")  || telefone.includes("J")|| telefone.includes("K")|| telefone.includes("L")
+        || telefone.includes("M")|| telefone.includes("N")|| telefone.includes("O")|| telefone.includes("P")|| telefone.includes("Q")|| telefone.includes("R")
+        || telefone.includes("S")|| telefone.includes("T")|| telefone.includes("U")|| telefone.includes("V")|| telefone.includes("W")|| telefone.includes("X")
+        || telefone.includes("Y")|| telefone.includes("Z") || telefone.includes("@")|| telefone.includes("&")||telefone.includes("+")|| telefone.includes("#")|| telefone.includes("<") || telefone.includes(">")){//para excluir mais letras caso seja digitado
+            alert("Está área não permite letra! Excluiremos este.");
+            telefone = telefone.replace("a","");
+            telefone = telefone.replace("b","");
+            telefone = telefone.replace("c","");
+            telefone = telefone.replace("d","");
+            telefone = telefone.replace("e","");
+            telefone = telefone.replace("f","");
+            telefone = telefone.replace("g","");
+            telefone = telefone.replace("h","");
+            telefone = telefone.replace("i","");
+            telefone = telefone.replace("j","");
+            telefone = telefone.replace("k","");
+            telefone = telefone.replace("l","");
+            telefone = telefone.replace("m","");
+            telefone = telefone.replace("n","");
+            telefone = telefone.replace("o","");
+            telefone = telefone.replace("p","");
+            telefone = telefone.replace("q","");
+            telefone = telefone.replace("r","");
+            telefone = telefone.replace("s","");
+            telefone = telefone.replace("t","");
+            telefone = telefone.replace("u","");
+            telefone = telefone.replace("v","");
+            telefone = telefone.replace("w","");
+            telefone = telefone.replace("x","");
+            telefone = telefone.replace("y","");
+            telefone = telefone.replace("z","");
+            telefone = telefone.replace("A","");
+            telefone = telefone.replace("B","");
+            telefone = telefone.replace("C","");
+            telefone = telefone.replace("D","");
+            telefone = telefone.replace("E","");
+            telefone = telefone.replace("F","");
+            telefone = telefone.replace("G","");
+            telefone = telefone.replace("H","");
+            telefone = telefone.replace("I","");
+            telefone = telefone.replace("J","");
+            telefone = telefone.replace("K","");
+            telefone = telefone.replace("L","");
+            telefone = telefone.replace("M","");
+            telefone = telefone.replace("N","");
+            telefone = telefone.replace("O","");
+            telefone = telefone.replace("P","");
+            telefone = telefone.replace("Q","");
+            telefone = telefone.replace("R","");
+            telefone = telefone.replace("S","");
+            telefone = telefone.replace("T","");
+            telefone = telefone.replace("U","");
+            telefone = telefone.replace("V","");
+            telefone = telefone.replace("W","");
+            telefone = telefone.replace("X","");
+            telefone = telefone.replace("Y","");
+            telefone = telefone.replace("Z","");
+            telefone = telefone.replace("@","");
+            telefone = telefone.replace("&","");
+            telefone = telefone.replace("+","");
+            telefone = telefone.replace("#","");
+            telefone = telefone.replace("<","");
+            telefone = telefone.replace(">","");
+        }
+
+        document.getElementById("itelefone").value = telefone;
+    }
+
+    function verificarEmail(){
+        let email = document.getElementById("iemail").value;
+        
+        email = email.trim();
+
+        //retirando os espaços duplos no meio do nome
+        while(email.includes("  ")){
+            email =  email.replace("  "," ");
+        }
+    
+        if(email.length==0){
+            //verificando se a caixa de texto esta vazia
+            alert ("Caixa de texto em branco.");
+        }else{
+            if(email.length<=4){
+                alert ("email muito curto.");
+            }else{
+                if(!email.includes("@")){
+                    //verificando se não possui @
+                    alert ("Você se esqueceu de colocar @.");
+                }else{
+                    if(email.IndexOf("@") != email.lastIndexOf("@")){
+                        //verifico se tem mais de um arroba
+                        alert ("Você têm mais de um @");
+                    }else{
+                        //verificando se começa com número ou caracter.
+                        var pLetra = email.substring(0,1)
+                        if(pLetra == "0" ||pLetra == "1" ||pLetra == "2" ||pLetra == "3" ||pLetra == "4" ||pLetra == "5" ||pLetra == "6" ||pLetra == "7" ||pLetra == "8" ||pLetra == "9" ||pLetra == "@" ){
+                            alert ("Você iniciou seu email com um caracter inválido");
+                        }else{
+                            var tamanho = email.length;
+                            var uLetra = email.substring(tamanho-1);//extrai o último caracter digitado
+                        }if(uLetra == "0" ||uLetra == "1" ||uLetra == "2" ||uLetra == "3" ||uLetra == "4" ||uLetra == "5" ||uLetra == "6" ||uLetra == "7" ||uLetra == "8" ||uLetra == "9" ||uLetra == "@" ){
+                            alert ("Você não pode terminar o seu email com um caracter inválido");
+                        }else{
+                            //verifica se tem ponto antes do @
+                            if(email.IndexOf(".") != email.lastIndexOf("@")){
+                                alert ("Você digitou o ponto de forma errada.");
+                            }
+                    }   }
+                }
+            }   
+        }   
+            
+
+        document.getElementById("iemail").value = telefone;
+    }
+    
+    function verificarSugestao(){
+
+        let sugestao = document.getElementById("isugestao").value;
+        sugestao = sugestao.trim();
+        
+
+        //retirando os espaços duplos no meio do sugestao
+        while(sugestao.includes("  ")){
+            sugestao =  sugestao.replace("  "," ");
+        }
+
+        //verificar se ele é um sugestao com sobresugestao
+        if( sugestao.length < 5){
+            alert("Você não digitou o sugestão completamente, favor escreva  novamente.");
+        }
+
+        //retirando os números do sugestao
+        while( sugestao.includes("0") || sugestao.includes("1")|| sugestao.includes("2")|| sugestao.includes("3")|| sugestao.includes("4")
+        || sugestao.includes("5") || sugestao.includes("6") || sugestao.includes("7") || sugestao.includes("8")  || sugestao.includes("9")
+        || sugestao.includes("@")|| sugestao.includes("&")|| sugestao.includes("+")|| sugestao.includes("#")|| sugestao.includes("<") || sugestao.includes(">")){//para excluir mais números caso seja digitado
+            alert("Está área não permite número! Excluiremos este.");
+            sugestao = sugestao.replace("0","");
+            sugestao = sugestao.replace("1","");
+            sugestao = sugestao.replace("2","");
+            sugestao = sugestao.replace("3","");
+            sugestao = sugestao.replace("4","");
+            sugestao = sugestao.replace("5","");
+            sugestao = sugestao.replace("6","");
+            sugestao = sugestao.replace("7","");
+            sugestao = sugestao.replace("8","");
+            sugestao = sugestao.replace("9","");
+            sugestao = sugestao.replace("@","");
+            sugestao = sugestao.replace("&","");
+            sugestao = sugestao.replace("+","");
+            sugestao = sugestao.replace("#","");
+            sugestao = sugestao.replace("<","");
+            sugestao = sugestao.replace(">","");
+            
+        }
+
+        document.getElementById("isugestao").value = sugestao;
+    
+    }
+    
+</script>
+</html>

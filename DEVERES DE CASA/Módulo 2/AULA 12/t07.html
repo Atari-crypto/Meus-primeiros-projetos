@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa n°7 - Desafio.</title>
+</head>
+<body>
+    
+
+    <script>
+        /*Faça um script em JavaScript para verificar se um número inteiro positivo é um número primo. Um número primo é um número divisível somente por 1 e por ele mesmo.*/
+
+        var num= parseInt(prompt("Digite um número")); // n numero a ser analisado
+        var cont= 0; // variável auxiliar contador
+        var i= 0; // variável auxiliar 
+
+        while(i<=num){
+            if (num%i==0){
+                cont++; 
+            }
+            i++;
+        }
+            if(cont==2){
+                document.write("O número " + num + " é primo.");
+            }else{
+                document.write("O número " + num + " não é primo.");
+            }
+
+            // outra forma de fazer:
+
+            var num= parseInt(prompt("Digite um número")); // n numero a ser analisado
+            var cont= 0; // variável auxiliar contador
+            var i= 0; // variável auxiliar 
+            //var achei=true;
+            while(i<=num-1){
+                if (num%i==0){
+                    cont++;
+                    //achei=false;
+                    break; 
+                }
+                i++;
+            }
+                if(cont==0){//if(achei){
+                    document.write("O número " + num + " é primo.");
+                }else{
+                    document.write("O número " + num + " não é primo.");
+                }
+    </script>
+    </body>
+</html>
